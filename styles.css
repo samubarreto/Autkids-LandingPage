@@ -220,6 +220,68 @@ a:focus {
   flex-shrink: 0;
 }
 
+.mobile-menu-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 20px 24px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.mobile-menu-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  border-radius: 12px;
+  background: var(--primary-yellow);
+  color: #7a5200;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.mobile-menu-cta:hover {
+  background: #f5b900;
+}
+
+.mobile-menu-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobile-menu-social > span {
+  color: #555;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.mobile-menu-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.mobile-menu-social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #fff9e4;
+}
+
+.mobile-menu-social-links a:hover {
+  background: #fff3c4;
+}
+
 /* ========================================
    BOTÕES DO HEADER + AÇÕES
 ======================================== */
@@ -1028,7 +1090,7 @@ section {
 ======================================== */
 .waitlist-section {
   background: transparent;
-  padding: 60px 0 0;
+  padding: 0;
   max-width: none;
   width: 100%;
 }
@@ -1037,6 +1099,8 @@ section {
   max-width: none;
   width: 100%;
   margin: 0 auto;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
   background: linear-gradient(135deg, #FFFBEA 0%, #FFF3C4 100%);
   padding: 56px;
   display: flex;
@@ -1636,7 +1700,7 @@ section {
   }
 
   .pricing-right {
-    padding-bottom: 56px;
+    padding-bottom: 0;
   }
 
   .pricing-left {
@@ -1676,7 +1740,7 @@ section {
   }
 
   .mockup-slide {
-    width: 410px;
+    width: min(430px, 100%);
   }
 
   .tablet {
@@ -1763,7 +1827,7 @@ section {
   }
 
   .mockup-slide {
-    width: 340px;
+    width: min(430px, 100%);
   }
 
   .mockup-slide.right-1 {
