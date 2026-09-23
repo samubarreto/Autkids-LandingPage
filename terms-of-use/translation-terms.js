@@ -62,7 +62,7 @@ const translations = {
     sec_10_title: "10. Alterações nos Termos",
     sec_10_text: "Reservamo-nos o direito de <strong>atualizar estes termos periodicamente</strong>. O uso continuado do app após alterações constitui aceitação dos novos termos.",
 
-    footer_rights: `© ${currentYear} Autkids | CNPJ: 65.388.377/0001-00. Todos os direitos reservados`
+    footer_rights: `© ${currentYear} Autkids | CNPJ: 65.388.377/0001-05. Todos os direitos reservados`
   },
 
   en: {
@@ -126,7 +126,7 @@ const translations = {
     sec_10_title: "10. Changes to the Terms",
     sec_10_text: "We reserve the right to <strong>update these terms periodically</strong>. Continued use of the app after changes constitutes acceptance of the new terms.",
 
-    footer_rights: `© ${currentYear} Autkids | CNPJ: 65.388.377/0001-00. All rights reserved`
+    footer_rights: `© ${currentYear} Autkids | CNPJ: 65.388.377/0001-05. All rights reserved`
   },
 
   es: {
@@ -190,7 +190,7 @@ const translations = {
     sec_10_title: "10. Cambios en los Términos",
     sec_10_text: "Nos reservamos el derecho de <strong>actualizar estos términos periódicamente</strong>. El uso continuado de la app tras los cambios constituye la aceptación de los nuevos términos.",
 
-    footer_rights: `© ${currentYear} Autkids | CNPJ: 65.388.377/0001-00. Todos los derechos reservados`
+    footer_rights: `© ${currentYear} Autkids | CNPJ: 65.388.377/0001-05. Todos los derechos reservados`
   }
 };
 

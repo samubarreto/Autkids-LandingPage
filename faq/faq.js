@@ -93,32 +93,78 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ============================================================
-      3. ACORDEÃO (PERGUNTAS E RESPOSTAS) — CORRIGIDO
+      3. ACORDEÃO (PERGUNTAS E RESPOSTAS) — por seção + acessível
   ============================================================ */
-  const questions = document.querySelectorAll('.faq-question');
+  let faqUid = 0;
 
-  questions.forEach(question => {
-    question.addEventListener('click', () => {
-      const isActive = question.classList.contains('active');
+  document.querySelectorAll('.faq-section').forEach(section => {
+    const sectionQuestions = Array.from(section.querySelectorAll('.faq-question'));
 
-      // Fecha todos os outros
-      questions.forEach(q => {
-        q.classList.remove('active');
-        const ans = q.nextElementSibling;
-        ans.style.maxHeight = null;
-        ans.style.paddingTop = '0';
-        ans.style.paddingBottom = '0'; // CORRIGIDO: remove padding inferior também
+    sectionQuestions.forEach(question => {
+      const answer = question.nextElementSibling;
+      faqUid += 1;
+      const answerId = `faq-answer-${faqUid}`;
+      answer.id = answerId;
+      question.setAttribute('aria-expanded', 'false');
+      question.setAttribute('aria-controls', answerId);
+
+      question.addEventListener('click', () => {
+        const isActive = question.classList.contains('active');
+
+        // Fecha as outras perguntas da mesma seção
+        sectionQuestions.forEach(q => {
+          q.classList.remove('active');
+          q.setAttribute('aria-expanded', 'false');
+          const ans = q.nextElementSibling;
+          ans.style.maxHeight = null;
+          ans.style.paddingTop = '0';
+          ans.style.paddingBottom = '0';
+        });
+
+        // Abre a clicada (se não estava aberta)
+        if (!isActive) {
+          question.classList.add('active');
+          question.setAttribute('aria-expanded', 'true');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          answer.style.paddingTop = '';
+          answer.style.paddingBottom = '';
+        }
       });
-
-      // Abre o clicado (se não estava aberto)
-      if (!isActive) {
-        question.classList.add('active');
-        const answer = question.nextElementSibling;
-        answer.style.maxHeight = answer.scrollHeight + 'px';
-        answer.style.paddingTop = '';    // restaura padding do CSS
-        answer.style.paddingBottom = ''; // restaura padding do CSS
-      }
     });
   });
+
+  /* ============================================================
+      4. BUSCA
+  ============================================================ */
+  const searchInput = document.getElementById('faqSearch');
+  const noResultsEl = document.getElementById('faqNoResults');
+  const faqSections = document.querySelectorAll('.faq-section');
+
+  const normalize = (str) => str
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '');
+
+  if (searchInput && faqSections.length) {
+    searchInput.addEventListener('input', () => {
+      const term = normalize(searchInput.value.trim());
+      let anyVisible = false;
+
+      faqSections.forEach(section => {
+        let sectionHasMatch = false;
+
+        section.querySelectorAll('.faq-item').forEach(item => {
+          const matches = normalize(item.textContent).includes(term);
+          item.hidden = !matches;
+          if (matches) sectionHasMatch = true;
+        });
+
+        section.hidden = !sectionHasMatch;
+        if (sectionHasMatch) anyVisible = true;
+      });
+
+      if (noResultsEl) noResultsEl.hidden = anyVisible;
+    });
+  }
 
 });

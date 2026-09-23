@@ -44,21 +44,22 @@ body {
   position: relative;
 }
 
-/* Botão Voltar */
 .back-btn {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  color: var(--text-dark);
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.95rem;
-  transition: color 0.3s ease;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	text-decoration: none;
+	font-weight: 700;
+	color: var(--text-dark);
+	padding: 10px 14px;
+	border-radius: 12px;
+	border: 2px solid #f0f0f0;
+	background: #fff;
+	transition: all 0.2s ease;
 }
 
 .back-btn:hover {
-  color: var(--primary-yellow);
+	border-color: var(--primary-yellow);
 }
 
 /* Trigger do idioma */
@@ -194,6 +195,46 @@ body {
 }
 
 /* ========================================
+   BUSCA
+======================================== */
+.faq-search-wrap {
+  position: relative;
+  max-width: 480px;
+  margin: 22px auto 0;
+}
+
+.faq-search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-gray);
+  pointer-events: none;
+}
+
+.faq-search-input {
+  width: 100%;
+  padding: 13px 16px 13px 44px;
+  border-radius: 999px;
+  border: 2px solid #f0f0f0;
+  background: var(--bg-white);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.faq-search-input:focus {
+  border-color: var(--primary-yellow);
+  box-shadow: 0 4px 14px rgba(255, 195, 0, 0.2);
+}
+
+.faq-search-input::-webkit-search-cancel-button {
+  cursor: pointer;
+}
+
+/* ========================================
    FAQ CONTAINER
 ======================================== */
 .faq-container {
@@ -207,11 +248,33 @@ body {
 }
 
 .faq-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: var(--text-dark);
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 16px;
   padding-left: 4px;
+}
+
+.faq-section-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: var(--secondary-yellow);
+  font-size: 1.05rem;
+  flex-shrink: 0;
+}
+
+.faq-no-results {
+  text-align: center;
+  color: var(--text-gray);
+  font-size: 0.95rem;
+  padding: 20px 16px;
 }
 
 /* FAQ item */
@@ -278,6 +341,63 @@ body {
 .faq-answer a {
   color: #b8860b;
   font-weight: 600;
+}
+
+/* ========================================
+   BANNER DE CONTATO
+======================================== */
+.faq-contact-banner {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  padding: 36px 24px;
+  text-align: center;
+  background: var(--secondary-yellow);
+  border-radius: 20px;
+}
+
+.faq-contact-banner h2 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.faq-contact-banner p {
+  color: var(--text-gray);
+  font-size: 0.98rem;
+  margin-bottom: 20px;
+}
+
+.faq-contact-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.faq-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+  background: var(--primary-yellow);
+  color: var(--text-dark);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.faq-contact-btn:hover {
+  background: #e6b000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(255, 195, 0, 0.35);
+}
+
+.faq-contact-btn--secondary {
+  background: var(--primary-yellow);
+  color: var(--text-dark);
+  border: 2px solid var(--primary-yellow);
 }
 
 /* ========================================
