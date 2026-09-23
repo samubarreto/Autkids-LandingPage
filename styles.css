@@ -80,7 +80,7 @@ a:focus { outline: none; }
   display: block;
 }
 
-/* ── Hamburguer — LADO ESQUERDO, só mobile ── */
+/* ── Hamburguer - LADO ESQUERDO, só mobile ── */
 .hamburger-btn {
   display: none;
   background: none;
@@ -91,7 +91,7 @@ a:focus { outline: none; }
   order: -1; /* garante que fique antes do ícone no flex */
 }
 
-/* ── Botão Planos — esconde no mobile ── */
+/* ── Botão Planos - esconde no mobile ── */
 .header-btn--outline { display: flex; }
 
 /* ── Overlay do menu ── */
@@ -524,7 +524,7 @@ section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
 .whatis-text strong { color: var(--text-dark); }
 
 /* ========================================
-   WAITLIST (captação de e-mail — pré-lançamento)
+   WAITLIST (captação de e-mail - pré-lançamento)
 ======================================== */
 .waitlist-section { background: transparent; padding: 60px 0; max-width: none; width: 100%; }
 
@@ -655,7 +655,7 @@ section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
   .hamburger-btn { display: flex; align-items: center; justify-content: center; }
   .header-btn--outline { display: none; }
   .language-dropdown { min-width: 340px; max-width: calc(100vw - 24px); right: 0; }
-  /* Esconde o ícone pequeno do header no mobile — a logo já aparece no hero */
+  /* Esconde o ícone pequeno do header no mobile - a logo já aparece no hero */
   .top-flags .top-icon { display: none; }
   /* Header mais alto no mobile */
   .language-selector { padding: 18px 20px; }
@@ -722,11 +722,11 @@ section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
 /* ========================================
    ANIMAÇÕES AUTKIDS
    Mantidos apenas os que têm propósito real:
-   — play pulse no YouTube (convida ao clique)
-   — tw-blink (cursor do typewriter, definido no hero)
+   - play pulse no YouTube (convida ao clique)
+   - tw-blink (cursor do typewriter, definido no hero)
 ======================================== */
 
-/* Pulso sutil — botão play YouTube */
+/* Pulso sutil - botão play YouTube */
 @keyframes ak-play-pulse {
   0%, 100% { transform: scale(1);    box-shadow: 0 4px 20px rgba(255,195,0,0.5); }
   50%       { transform: scale(1.04); box-shadow: 0 6px 24px rgba(255,195,0,0.65); }

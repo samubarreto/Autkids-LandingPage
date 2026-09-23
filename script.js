@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ============================================================
-      7. TYPEWRITER — integrado ao sistema de idiomas
+      7. TYPEWRITER - integrado ao sistema de idiomas
          As palavras e o sufixo do título mudam por idioma.
          Não usa data-i18n no h1 para preservar o span#tw-word.
   ============================================================ */
@@ -244,12 +244,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ============================================================
-      8. updateHeroTitle — atualiza sufixo do título por idioma
+      8. updateHeroTitle - atualiza sufixo do título por idioma
          sem tocar no span#tw-word
   ============================================================ */
 
   /* ============================================================
-      9. YOUTUBE MODAL — iframe carrega só no clique do play
+      9. YOUTUBE MODAL - iframe carrega só no clique do play
   ============================================================ */
   const ytPlayBtn    = document.getElementById('ytPlayBtn');
   const ytModal      = document.getElementById('ytModal');
@@ -278,7 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ============================================================
-      WAITLIST (captação de e-mail — pré-lançamento)
+      WAITLIST (captação de e-mail - pré-lançamento)
   ============================================================ */
   const WAITLIST_API_BASE_URL = 'https://api.autkids.tech';
 
@@ -374,9 +374,9 @@ function updateHeroTitle(lang) {
   if (!suffix) return;
 
   const suffixes = {
-    pt: ' e se<br /><span class="highlight">divertir</span> — tudo em um <br>aplicativo seguro!',
-    en: ' and<br /><span class="highlight">have fun</span> — all in one<br>safe app!',
-    es: ' y<br /><span class="highlight">divertirse</span> — todo en una<br>aplicación segura!'
+    pt: ' e se<br /><span class="highlight">divertir</span> - tudo em um <br>aplicativo seguro!',
+    en: ' and<br /><span class="highlight">have fun</span> - all in one<br>safe app!',
+    es: ' y<br /><span class="highlight">divertirse</span> - todo en una<br>aplicación segura!'
   };
 
   suffix.innerHTML = suffixes[lang] || suffixes.pt;

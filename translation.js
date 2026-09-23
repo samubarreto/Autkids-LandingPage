@@ -10,7 +10,7 @@ const currentYear = new Date().getFullYear();
 const translations = {
   'pt': {
     'page_title': 'Autkids',
-    'hero_desc': 'Toda criança merece se comunicar com alegria — e nós estamos aqui para tornar essa experiência única',
+    'hero_desc': 'Toda criança merece se comunicar com alegria - e nós estamos aqui para tornar essa experiência única',
     'btn_download': 'Entrar na lista de espera',
     'btn_download_short': 'Lista de espera',
     'nav_about': 'Sobre',
@@ -56,7 +56,7 @@ const translations = {
 
   'en': {
     'page_title': 'Autkids',
-    'hero_desc': 'Every child deserves to communicate with joy — and we are here to make this experience unique.',
+    'hero_desc': 'Every child deserves to communicate with joy - and we are here to make this experience unique.',
     'btn_download': 'Join the waitlist',
     'btn_download_short': 'Waitlist',
     'nav_about': 'About',
@@ -102,7 +102,7 @@ const translations = {
 
   'es': {
     'page_title': 'Autkids',
-    'hero_desc': 'Todos los niños merecen comunicarse con alegría — y estamos aquí para hacer de esta experiencia algo único.',
+    'hero_desc': 'Todos los niños merecen comunicarse con alegría - y estamos aquí para hacer de esta experiencia algo único.',
     'btn_download': 'Unirme a la lista de espera',
     'btn_download_short': 'Lista de espera',
     'nav_about': 'Acerca de',

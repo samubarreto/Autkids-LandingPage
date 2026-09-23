@@ -1,5 +1,5 @@
 /* ========================================
-   PRICING — TRADUÇÕES (PT / EN / ES)
+   PRICING - TRADUÇÕES (PT / EN / ES)
    Linguagem de benefícios, não de recursos técnicos
 ======================================== */
 
@@ -38,7 +38,7 @@ const pricingTranslations = {
     /* ESSENCIAL */
     plan_essential_label: 'Para famílias que querem personalizar',
     plan_essential_title: 'Essencial',
-    plan_essential_desc:  'Tudo do gratuito, sem interrupções — pensado para a rotina da sua família.',
+    plan_essential_desc:  'Tudo do gratuito, sem interrupções - pensado para a rotina da sua família.',
     plan_essential_stat1: '1 Criança',
     plan_essential_stat2: 'Pranchas ilimitadas',
     plan_essential_stat3: '120 Cards personalizados',
@@ -129,7 +129,7 @@ const pricingTranslations = {
     faq_q1: 'Como faço para assinar um plano?',
     faq_a1: 'Assim que o Autkids for lançado nas lojas de aplicativos, você vai poder baixá-lo gratuitamente, criar sua conta e escolher o plano ideal direto no app. Dá pra mudar ou cancelar quando quiser. Entre na lista de espera pra ser avisado assim que isso acontecer.',
     faq_q2: 'A área da criança realmente não tem anúncios?',
-    faq_a2: 'Sim! A tela que a criança usa é 100% livre de anúncios em todos os planos. No plano gratuito, pode aparecer um anúncio discreto na área de configuração dos responsáveis — nunca na frente da criança.',
+    faq_a2: 'Sim! A tela que a criança usa é 100% livre de anúncios em todos os planos. No plano gratuito, pode aparecer um anúncio discreto na área de configuração dos responsáveis - nunca na frente da criança.',
     faq_q3: 'Posso mudar de plano depois?',
     faq_a3: 'Claro! Você pode fazer upgrade ou downgrade a qualquer momento, sem complicação.',
     faq_q4: 'O plano Profissional funciona para clínicas pequenas?',
@@ -167,7 +167,7 @@ const pricingTranslations = {
 
     plan_essential_label: 'For families who want to personalize',
     plan_essential_title: 'Essential',
-    plan_essential_desc:  'Everything in Free, without interruptions — designed for your family routine.',
+    plan_essential_desc:  'Everything in Free, without interruptions - designed for your family routine.',
     plan_essential_stat1: '1 Child',
     plan_essential_stat2: 'Unlimited boards',
     plan_essential_stat3: '120 custom cards',
@@ -252,7 +252,7 @@ const pricingTranslations = {
     faq_q1: 'How do I subscribe to a plan?',
     faq_a1: 'Once Autkids launches on the app stores, you\'ll be able to download it for free, create your account, and choose your plan right in the app. You can change or cancel anytime. Join the waitlist to be notified as soon as that happens.',
     faq_q2: "Is the child's area really ad-free?",
-    faq_a2: "Yes! The screen your child uses is 100% ad-free on all plans. On the free plan, a discreet ad may appear in the parent settings area — never in front of the child.",
+    faq_a2: "Yes! The screen your child uses is 100% ad-free on all plans. On the free plan, a discreet ad may appear in the parent settings area - never in front of the child.",
     faq_q3: 'Can I change my plan later?',
     faq_a3: 'Of course! You can upgrade or downgrade at any time, hassle-free.',
     faq_q4: 'Does the Professional plan work for small clinics?',
@@ -290,7 +290,7 @@ const pricingTranslations = {
 
     plan_essential_label: 'Para familias que quieren personalizar',
     plan_essential_title: 'Esencial',
-    plan_essential_desc:  'Todo lo del gratuito, sin interrupciones — pensado para la rutina de tu familia.',
+    plan_essential_desc:  'Todo lo del gratuito, sin interrupciones - pensado para la rutina de tu familia.',
     plan_essential_stat1: '1 Niño',
     plan_essential_stat2: 'Tableros ilimitados',
     plan_essential_stat3: '120 cards personalizadas',
@@ -375,7 +375,7 @@ const pricingTranslations = {
     faq_q1: '¿Cómo contrato un plan?',
     faq_a1: 'En cuanto Autkids sea lanzado en las tiendas de aplicaciones, vas a poder descargarlo gratis, crear tu cuenta y elegir tu plan directamente en la app. Puedes cambiar o cancelar cuando quieras. Únete a la lista de espera para que te avisemos en cuanto eso pase.',
     faq_q2: '¿El área del niño realmente no tiene anuncios?',
-    faq_a2: 'Sí! La pantalla que usa el niño es 100% libre de anuncios en todos los planes. En el plan gratuito, puede aparecer un anuncio discreto en el área de configuración de los responsables — nunca frente al niño.',
+    faq_a2: 'Sí! La pantalla que usa el niño es 100% libre de anuncios en todos los planes. En el plan gratuito, puede aparecer un anuncio discreto en el área de configuración de los responsables - nunca frente al niño.',
     faq_q3: '¿Puedo cambiar de plan después?',
     faq_a3: 'Claro! Puedes hacer upgrade o downgrade en cualquier momento, sin complicaciones.',
     faq_q4: '¿El plan Profesional funciona para clínicas pequeñas?',
