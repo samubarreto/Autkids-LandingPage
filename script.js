@@ -13,24 +13,24 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ============================================================
       2. SELETOR DE IDIOMAS
   ============================================================ */
-  const langTrigger     = document.getElementById('langTrigger');
-  const langDropdown    = document.getElementById('langDropdown');
-  const currentFlag     = document.getElementById('currentFlag');
-  const currentLang     = document.getElementById('currentLang');
+  const langTrigger = document.getElementById('langTrigger');
+  const langDropdown = document.getElementById('langDropdown');
+  const currentFlag = document.getElementById('currentFlag');
+  const currentLang = document.getElementById('currentLang');
   const languageOptions = document.querySelectorAll('.language-option');
 
   if (langTrigger && langDropdown) {
 
     const languages = {
       pt: { name: 'Português', flag: 'assets/bandeiras/brasil.png' },
-      en: { name: 'English',   flag: 'assets/bandeiras/eua.png'    },
-      es: { name: 'Español',   flag: 'assets/bandeiras/espanha.png' }
+      en: { name: 'English', flag: 'assets/bandeiras/eua.png' },
+      es: { name: 'Español', flag: 'assets/bandeiras/espanha.png' }
     };
 
     const languageLabels = {
-      pt: { pt: 'Português', en: 'Inglês',    es: 'Espanhol'  },
-      en: { pt: 'Portuguese', en: 'English',  es: 'Spanish'   },
-      es: { pt: 'Portugués',  en: 'Inglés',   es: 'Español'   }
+      pt: { pt: 'Português', en: 'Inglês', es: 'Espanhol' },
+      en: { pt: 'Portuguese', en: 'English', es: 'Spanish' },
+      es: { pt: 'Portugués', en: 'Inglés', es: 'Español' }
     };
 
     function applyLanguage(lang) {
@@ -77,9 +77,9 @@ document.addEventListener('DOMContentLoaded', () => {
       3. MENU HAMBURGUER (MOBILE)
   ============================================================ */
   const hamburgerBtn = document.getElementById('hamburgerBtn');
-  const menuDrawer   = document.getElementById('menuDrawer');
-  const menuOverlay  = document.getElementById('menuOverlay');
-  const menuClose    = document.getElementById('menuClose');
+  const menuDrawer = document.getElementById('menuDrawer');
+  const menuOverlay = document.getElementById('menuOverlay');
+  const menuClose = document.getElementById('menuClose');
 
   if (hamburgerBtn && menuDrawer && menuOverlay && menuClose) {
     function openMenu() {
@@ -97,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     hamburgerBtn.addEventListener('click', openMenu);
     menuClose.addEventListener('click', closeMenu);
     menuOverlay.addEventListener('click', closeMenu);
+    document.getElementById('mobileMenuCta')?.addEventListener('click', closeMenu);
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
   }
 
@@ -123,9 +124,9 @@ document.addEventListener('DOMContentLoaded', () => {
       5. CAROUSEL 3D DE PERSONAGENS
   ============================================================ */
   const mockupSlides = document.querySelectorAll('.mockup-slide');
-  const prevBtn      = document.querySelector('.prev-btn');
-  const nextBtn      = document.querySelector('.next-btn');
-  const indicators   = document.querySelectorAll('.carousel-indicator');
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+  const indicators = document.querySelectorAll('.carousel-indicator');
 
   if (mockupSlides.length === 0) return;
 
@@ -135,9 +136,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function getPosition(slideIndex, current, n) {
     const diff = ((slideIndex - current) + n) % n;
-    if (diff === 0)     return 'center';
-    if (diff === 1)     return 'right-1';
-    if (diff === 2)     return 'right-2';
+    if (diff === 0) return 'center';
+    if (diff === 1) return 'right-1';
+    if (diff === 2) return 'right-2';
     if (diff === n - 1) return 'left-1';
     if (diff === n - 2) return 'left-2';
     return 'hidden';
@@ -166,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
     slide.addEventListener('click', () => { if (i !== currentIndex) { goTo(i); resetTimer(); } });
   });
   document.addEventListener('keydown', e => {
-    if (e.key === 'ArrowLeft')  { prev(); resetTimer(); }
+    if (e.key === 'ArrowLeft') { prev(); resetTimer(); }
     if (e.key === 'ArrowRight') { next(); resetTimer(); }
   });
 
@@ -175,11 +176,11 @@ document.addEventListener('DOMContentLoaded', () => {
   ============================================================ */
   if (typeof AOS !== 'undefined') {
     AOS.init({
-      duration : 700,
-      easing   : 'ease-out',
-      once     : true,
-      offset   : 80,
-      disable  : window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      duration: 700,
+      easing: 'ease-out',
+      once: true,
+      offset: 80,
+      disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches
     });
   }
 
@@ -190,8 +191,8 @@ document.addEventListener('DOMContentLoaded', () => {
   ============================================================ */
   const twWords = {
     pt: ['Aprender', 'Evoluir', 'Expressar'],
-    en: ['Learn',    'Grow',    'Express'  ],
-    es: ['Aprender', 'Crecer',  'Expresar' ]
+    en: ['Learn', 'Grow', 'Express'],
+    es: ['Aprender', 'Crecer', 'Expresar']
   };
 
   const twEl = document.getElementById('tw-word');
@@ -200,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function twTick(lang) {
     const words = twWords[lang] || twWords.pt;
-    const word  = words[twWi % words.length];
+    const word = words[twWi % words.length];
 
     if (!twDeleting) {
       twCi++;
@@ -251,10 +252,10 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ============================================================
       9. YOUTUBE MODAL - iframe carrega só no clique do play
   ============================================================ */
-  const ytPlayBtn    = document.getElementById('ytPlayBtn');
-  const ytModal      = document.getElementById('ytModal');
+  const ytPlayBtn = document.getElementById('ytPlayBtn');
+  const ytModal = document.getElementById('ytModal');
   const ytModalClose = document.getElementById('ytModalClose');
-  const ytIframe     = document.getElementById('ytModalIframe');
+  const ytIframe = document.getElementById('ytModalIframe');
 
   if (ytPlayBtn && ytModal && ytIframe) {
     function openYtModal() {
@@ -285,13 +286,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mesmo enum de idioma usado pela API de marketing (0=pt, 2=en, 3=es)
   const WAITLIST_LANGUAGE_CODES = { pt: 0, en: 2, es: 3 };
 
-  const waitlistBtn       = document.getElementById('waitlistBtn');
-  const waitlistBtnText   = waitlistBtn ? waitlistBtn.querySelector('.waitlist-btn-text') : null;
-  const waitlistName      = document.getElementById('waitlistName');
-  const waitlistEmail     = document.getElementById('waitlistEmail');
-  const waitlistForm      = document.getElementById('waitlistForm');
-  const waitlistSuccess   = document.getElementById('waitlistSuccess');
-  const waitlistError     = document.getElementById('waitlistError');
+  const waitlistBtn = document.getElementById('waitlistBtn');
+  const waitlistBtnText = waitlistBtn ? waitlistBtn.querySelector('.waitlist-btn-text') : null;
+  const waitlistName = document.getElementById('waitlistName');
+  const waitlistEmail = document.getElementById('waitlistEmail');
+  const waitlistForm = document.getElementById('waitlistForm');
+  const waitlistSuccess = document.getElementById('waitlistSuccess');
+  const waitlistError = document.getElementById('waitlistError');
   const waitlistErrorText = document.getElementById('waitlistErrorText');
 
   async function readWaitlistResponse(response) {

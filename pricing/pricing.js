@@ -3,27 +3,27 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ============================================================
       1. SELETOR DE IDIOMAS
   ============================================================ */
-  const langTrigger     = document.getElementById('langTrigger');
-  const langDropdown    = document.getElementById('langDropdown');
-  const currentFlag     = document.getElementById('currentFlag');
-  const currentLangEl   = document.getElementById('currentLang');
+  const langTrigger = document.getElementById('langTrigger');
+  const langDropdown = document.getElementById('langDropdown');
+  const currentFlag = document.getElementById('currentFlag');
+  const currentLangEl = document.getElementById('currentLang');
   const languageOptions = document.querySelectorAll('.language-option');
 
   const languages = {
     pt: { flag: '../assets/bandeiras/brasil.png' },
-    en: { flag: '../assets/bandeiras/eua.png'    },
+    en: { flag: '../assets/bandeiras/eua.png' },
     es: { flag: '../assets/bandeiras/espanha.png' }
   };
 
   const languageLabels = {
-    pt: { pt: 'Português', en: 'Inglês',    es: 'Espanhol' },
-    en: { pt: 'Portuguese', en: 'English',  es: 'Spanish'  },
-    es: { pt: 'Portugués',  en: 'Inglés',   es: 'Español'  }
+    pt: { pt: 'Português', en: 'Inglês', es: 'Espanhol' },
+    en: { pt: 'Portuguese', en: 'English', es: 'Spanish' },
+    es: { pt: 'Portugués', en: 'Inglés', es: 'Español' }
   };
 
   function applyLanguage(lang) {
     if (!languages[lang]) lang = 'pt';
-    if (currentFlag)   currentFlag.src = languages[lang].flag;
+    if (currentFlag) currentFlag.src = languages[lang].flag;
     if (currentLangEl) currentLangEl.textContent = languageLabels[lang][lang];
     languageOptions.forEach(opt => {
       const lbl = opt.querySelector('span');
@@ -62,9 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ============================================================
       2. TOGGLE MENSAL / ANUAL
   ============================================================ */
-  const toggleBtn   = document.getElementById('toggleBtn');
-  const lblMensal   = document.getElementById('lbl-mensal');
-  const lblAnual    = document.getElementById('lbl-anual');
+  const toggleBtn = document.getElementById('toggleBtn');
+  const lblMensal = document.getElementById('lbl-mensal');
+  const lblAnual = document.getElementById('lbl-anual');
   const priceValues = document.querySelectorAll('.price-value');
   let anual = false;
 
@@ -98,11 +98,11 @@ document.addEventListener('DOMContentLoaded', () => {
       5. CARROSSEL DE PLANOS - MOBILE
   ============================================================ */
   const plansGrid = document.querySelector('.plans-grid');
-  const dots      = document.querySelectorAll('.carousel-dot');
+  const dots = document.querySelectorAll('.carousel-dot');
 
   if (plansGrid && dots.length) {
     function getActiveIndex() {
-      const cards   = plansGrid.querySelectorAll('.plan-card');
+      const cards = plansGrid.querySelectorAll('.plan-card');
       const centerX = plansGrid.scrollLeft + plansGrid.clientWidth / 2;
       let closest = 0, minDist = Infinity;
       cards.forEach((card, i) => {

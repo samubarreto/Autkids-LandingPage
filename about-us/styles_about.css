@@ -610,11 +610,25 @@ section {
 }
 
 /* Cada card torce num ângulo diferente - alternado via nth-child */
-.member:nth-child(1):hover { transform: rotate(-3deg) scale(1.09); }
-.member:nth-child(2):hover { transform: rotate(2.5deg) scale(1.09); }
-.member:nth-child(3):hover { transform: rotate(-2deg) scale(1.09); }
-.member:nth-child(4):hover { transform: rotate(3deg) scale(1.09); }
-.member:nth-child(5):hover { transform: rotate(-1.5deg) scale(1.09); }
+.member:nth-child(1):hover {
+	transform: rotate(-3deg) scale(1.09);
+}
+
+.member:nth-child(2):hover {
+	transform: rotate(2.5deg) scale(1.09);
+}
+
+.member:nth-child(3):hover {
+	transform: rotate(-2deg) scale(1.09);
+}
+
+.member:nth-child(4):hover {
+	transform: rotate(3deg) scale(1.09);
+}
+
+.member:nth-child(5):hover {
+	transform: rotate(-1.5deg) scale(1.09);
+}
 
 .member:hover {
 	box-shadow: 0 10px 0 #c9a800, 0 18px 32px rgba(0, 0, 0, 0.16);
@@ -936,11 +950,25 @@ section {
 	}
 
 	/* Reduz a torção no mobile para não sair da tela */
-	.member:nth-child(1):hover { transform: rotate(-2deg) scale(1.05); }
-	.member:nth-child(2):hover { transform: rotate(1.5deg) scale(1.05); }
-	.member:nth-child(3):hover { transform: rotate(-1.5deg) scale(1.05); }
-	.member:nth-child(4):hover { transform: rotate(2deg) scale(1.05); }
-	.member:nth-child(5):hover { transform: rotate(-1deg) scale(1.05); }
+	.member:nth-child(1):hover {
+		transform: rotate(-2deg) scale(1.05);
+	}
+
+	.member:nth-child(2):hover {
+		transform: rotate(1.5deg) scale(1.05);
+	}
+
+	.member:nth-child(3):hover {
+		transform: rotate(-1.5deg) scale(1.05);
+	}
+
+	.member:nth-child(4):hover {
+		transform: rotate(2deg) scale(1.05);
+	}
+
+	.member:nth-child(5):hover {
+		transform: rotate(-1deg) scale(1.05);
+	}
 
 	/* Badge menor no mobile */
 	.member-badge {

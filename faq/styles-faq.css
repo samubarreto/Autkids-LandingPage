@@ -45,21 +45,21 @@ body {
 }
 
 .back-btn {
-	display: inline-flex;
-	align-items: center;
-	gap: 8px;
-	text-decoration: none;
-	font-weight: 700;
-	color: var(--text-dark);
-	padding: 10px 14px;
-	border-radius: 12px;
-	border: 2px solid #f0f0f0;
-	background: #fff;
-	transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--text-dark);
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 2px solid #f0f0f0;
+  background: #fff;
+  transition: all 0.2s ease;
 }
 
 .back-btn:hover {
-	border-color: var(--primary-yellow);
+  border-color: var(--primary-yellow);
 }
 
 /* Trigger do idioma */
