@@ -76,7 +76,7 @@ const translations = {
     sec_9_title: "9. Como Entrar em Contato",
     sec_9_text: "Se tiver dúvidas sobre o aplicativo, como tratamos as fotos, áudios ou dados de saúde do seu filho, entre em contato com nosso Encarregado de Proteção de Dados (DPO):",
     sec_9_li1: "<strong>E-mail:</strong> <a href='mailto:privacidade@autkids.app'>privacidade@autkids.app</a>",
-    sec_9_li2: "<strong>Endereço:</strong> Avenida Doutor Hercules Galletti, 260, Bloco 29, AP103 — Marília/SP",
+    sec_9_li2: "<strong>Endereço:</strong> Avenida Doutor Hercules Galletti, 260, Bloco 29, AP103 - Marília/SP",
 
     footer_rights: `© ${currentYear} Autkids | CNPJ: 65.388.377/0001-05. Todos os direitos reservados`
   },
@@ -156,7 +156,7 @@ const translations = {
     sec_9_title: "9. How to Contact Us",
     sec_9_text: "If you have questions about the app, how we handle your child's photos, audio, or health data, please contact our Data Protection Officer (DPO):",
     sec_9_li1: "<strong>Email:</strong> <a href='mailto:privacidade@autkids.app'>privacidade@autkids.app</a>",
-    sec_9_li2: "<strong>Address:</strong> Avenida Doutor Hercules Galletti, 260, Bloco 29, AP103 — Marília/SP, Brazil",
+    sec_9_li2: "<strong>Address:</strong> Avenida Doutor Hercules Galletti, 260, Bloco 29, AP103 - Marília/SP, Brazil",
 
     footer_rights: `© ${currentYear} Autkids | CNPJ: 65.388.377/0001-05. All rights reserved`
   },
@@ -236,7 +236,7 @@ const translations = {
     sec_9_title: "9. Cómo Contactarnos",
     sec_9_text: "Si tiene preguntas sobre la aplicación, cómo tratamos las fotos, audios o datos de salud de su hijo, póngase en contacto con nuestro Responsable de Protección de Datos (DPO):",
     sec_9_li1: "<strong>Correo:</strong> <a href='mailto:privacidade@autkids.app'>privacidade@autkids.app</a>",
-    sec_9_li2: "<strong>Dirección:</strong> Avenida Doutor Hercules Galletti, 260, Bloco 29, AP103 — Marília/SP, Brasil",
+    sec_9_li2: "<strong>Dirección:</strong> Avenida Doutor Hercules Galletti, 260, Bloco 29, AP103 - Marília/SP, Brasil",
 
     footer_rights: `© ${currentYear} Autkids | CNPJ: 65.388.377/0001-05. Todos los derechos reservados`
   }

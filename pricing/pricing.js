@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ============================================================
-      5. CARROSSEL DE PLANOS — MOBILE
+      5. CARROSSEL DE PLANOS - MOBILE
   ============================================================ */
   const plansGrid = document.querySelector('.plans-grid');
   const dots      = document.querySelectorAll('.carousel-dot');
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ============================================================
-      6. INDICADOR DE SCROLL — TABELA COMPARATIVA
+      6. INDICADOR DE SCROLL - TABELA COMPARATIVA
   ============================================================ */
   const compareWrap = document.querySelector('.compare-wrap');
 

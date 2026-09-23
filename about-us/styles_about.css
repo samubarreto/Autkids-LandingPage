@@ -609,7 +609,7 @@ section {
 	box-shadow: 0 4px 0 #e0c040, 0 6px 14px rgba(0, 0, 0, 0.10);
 }
 
-/* Cada card torce num ângulo diferente — alternado via nth-child */
+/* Cada card torce num ângulo diferente - alternado via nth-child */
 .member:nth-child(1):hover { transform: rotate(-3deg) scale(1.09); }
 .member:nth-child(2):hover { transform: rotate(2.5deg) scale(1.09); }
 .member:nth-child(3):hover { transform: rotate(-2deg) scale(1.09); }

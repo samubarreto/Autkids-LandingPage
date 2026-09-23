@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ============================================================
-      3. ACORDEÃO (PERGUNTAS E RESPOSTAS) — por seção + acessível
+      3. ACORDEÃO (PERGUNTAS E RESPOSTAS) - por seção + acessível
   ============================================================ */
   let faqUid = 0;
 

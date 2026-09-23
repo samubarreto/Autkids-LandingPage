@@ -247,7 +247,7 @@
   }
 
   /* ============================================================
-   EFEITO EQUIPE — Spotlight + Tilt 3D
+   EFEITO EQUIPE - Spotlight + Tilt 3D
    Adicione este bloco ao final do seu about.js existente
 ============================================================ */
 (function () {

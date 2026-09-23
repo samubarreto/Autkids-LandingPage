@@ -13,7 +13,7 @@ const translations = {
     faq_q_what_is: "O que é o Autkids?",
     faq_a_what_is: "O Autkids é um aplicativo criado para apoiar crianças no desenvolvimento da comunicação, rotina e habilidades sociais por meio de atividades divertidas e interativas.",
     faq_q_who_for: "Para quem o aplicativo foi desenvolvido?",
-    faq_a_who_for: "Ele foi pensado especialmente para crianças que precisam de apoio extra na comunicação e rotina — incluindo crianças autistas, mas não se limita a isso.",
+    faq_a_who_for: "Ele foi pensado especialmente para crianças que precisam de apoio extra na comunicação e rotina - incluindo crianças autistas, mas não se limita a isso.",
     faq_q_free: "O app é gratuito?",
     faq_a_free: "Sim! Uma parte essencial é gratuita. Recursos extras podem ser desbloqueados no plano mensal ou anual.",
 
@@ -66,7 +66,7 @@ const translations = {
     faq_q_what_is: "What is Autkids?",
     faq_a_what_is: "Autkids is an app designed to support children in developing communication, routines, and social skills through fun and interactive activities.",
     faq_q_who_for: "Who was the app developed for?",
-    faq_a_who_for: "It was designed especially for children who need extra support with communication and routines — including autistic children, but not limited to them.",
+    faq_a_who_for: "It was designed especially for children who need extra support with communication and routines - including autistic children, but not limited to them.",
     faq_q_free: "Is the app free?",
     faq_a_free: "Yes! An essential part is free. Extra features can be unlocked with a monthly or annual plan.",
 
@@ -119,7 +119,7 @@ const translations = {
     faq_q_what_is: "¿Qué es Autkids?",
     faq_a_what_is: "Autkids es una aplicación creada para apoyar a los niños en el desarrollo de la comunicación, rutinas y habilidades sociales mediante actividades divertidas e interactivas.",
     faq_q_who_for: "¿Para quién fue desarrollada la aplicación?",
-    faq_a_who_for: "Fue pensada especialmente para niños que necesitan apoyo extra en comunicación y rutina — incluyendo niños autistas, pero no se limita a ellos.",
+    faq_a_who_for: "Fue pensada especialmente para niños que necesitan apoyo extra en comunicación y rutina - incluyendo niños autistas, pero no se limita a ellos.",
     faq_q_free: "¿La app es gratuita?",
     faq_a_free: "¡Sí! Una parte esencial es gratuita. Se pueden desbloquear funciones extra con el plan mensual o anual.",
 
