@@ -196,7 +196,7 @@ function changeLanguage(lang) {
   localStorage.setItem('autkids-language', lang);
   if (translations[lang]?.['page_title']) document.title = translations[lang]['page_title'];
   document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key   = el.getAttribute('data-i18n');
+    const key = el.getAttribute('data-i18n');
     const value = translations[lang]?.[key];
     if (!value) return;
     if (KEYS_WITH_HTML.includes(key)) {

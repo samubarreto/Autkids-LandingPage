@@ -186,7 +186,7 @@ const translations = {
     sec_9_li2: "Uso indebido de la aplicación por terceros debido a la divulgación del <strong>PIN</strong> o la contraseña.",
     sec_9_li3: "Daños al dispositivo móvil derivados del uso por parte del niño.",
 
-  
+
     sec_10_title: "10. Cambios en los Términos",
     sec_10_text: "Nos reservamos el derecho de <strong>actualizar estos términos periódicamente</strong>. El uso continuado de la app tras los cambios constituye la aceptación de los nuevos términos.",
 

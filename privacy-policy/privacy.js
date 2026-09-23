@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (langTrigger && langDropdown) {
 
     const languages = {
-      pt: { name: 'Português', flag: '../assets/bandeiras/brasil.png'  },
-      en: { name: 'English',   flag: '../assets/bandeiras/eua.png'     },
-      es: { name: 'Español',   flag: '../assets/bandeiras/espanha.png' }
+      pt: { name: 'Português', flag: '../assets/bandeiras/brasil.png' },
+      en: { name: 'English', flag: '../assets/bandeiras/eua.png' },
+      es: { name: 'Español', flag: '../assets/bandeiras/espanha.png' }
     };
 
     const languageLabels = {
