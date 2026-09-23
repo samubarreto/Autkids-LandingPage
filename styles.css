@@ -538,9 +538,9 @@ section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
   box-shadow: 0 20px 50px rgba(255, 195, 0, 0.15);
 }
 
-.waitlist-content { text-align: left; }
+.waitlist-content { flex: 1 1 0; min-width: 0; text-align: left; }
 
-.waitlist-content h2 { font-size: clamp(1.1rem, 1.5vw, 1.6rem); font-weight: 800; color: var(--text-dark); margin-bottom: 14px; line-height: 1.2; }
+.waitlist-content h2 { max-width: 480px; font-size: clamp(1.1rem, 1.5vw, 1.6rem); font-weight: 800; color: var(--text-dark); margin-bottom: 14px; line-height: 1.2; }
 .waitlist-content p { font-size: 0.98rem; color: var(--text-gray); line-height: 1.7; margin: 0 auto 28px; font-weight: 500; max-width: 480px; }
 
 .waitlist-form { display: flex; flex-direction: column; gap: 14px; max-width: 480px; margin: 0 auto; }
@@ -655,6 +655,7 @@ section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
   .hamburger-btn { display: flex; align-items: center; justify-content: center; }
   .header-btn--outline { display: none; }
   .language-dropdown { min-width: 340px; max-width: calc(100vw - 24px); right: 0; }
+  .waitlist-image { display: none; }
   /* Esconde o ícone pequeno do header no mobile - a logo já aparece no hero */
   .top-flags .top-icon { display: none; }
   /* Header mais alto no mobile */
