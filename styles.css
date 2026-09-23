@@ -22,12 +22,12 @@ body {
   font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   color: var(--text-dark);
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
   background: var(--bg-white);
 }
 
 img { max-width: 100%; height: auto; display: block; }
-html { scroll-behavior: smooth; overflow-x: hidden; }
+html { scroll-behavior: smooth; overflow-x: clip; }
 
 button:focus, input:focus, a:focus-visible {
   outline: 2px solid var(--primary-yellow);
@@ -580,8 +580,9 @@ section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
 .waitlist-image img { width: 100%; max-width: 360px; height: auto; object-fit: contain; }
 
 @media (max-width: 900px) {
-  .waitlist-card { grid-template-columns: 1fr; padding: 32px; }
-  .waitlist-image { min-height: 160px; order: -1; }
+  .waitlist-card { flex-direction: column; padding: 32px; }
+  .waitlist-content { flex: 0 1 auto; width: 100%; }
+  .waitlist-image { width: 100%; min-height: 160px; order: -1; margin-bottom: 24px; }
   .waitlist-image img { max-width: 200px; }
 }
 
