@@ -41,7 +41,7 @@ const translations = {
     'waitlist_desc': 'Cadastre-se para garantir seu lugar na lista de espera e testar as novidades em primeira mão.',
     'waitlist_name_placeholder': 'Seu nome',
     'waitlist_placeholder': 'seu@email.com',
-    'waitlist_btn': 'Garantir minha vaga',
+    'waitlist_btn': 'Quero ser avisado',
     'waitlist_success': 'Ótimo! Te avisamos em breve 💛',
     'waitlist_trust': 'Receba um alerta de novas vagas. Sem spam.',
 
@@ -87,7 +87,7 @@ const translations = {
     'waitlist_desc': 'Sign up to secure your spot on the waitlist and try new features first.',
     'waitlist_name_placeholder': 'Your name',
     'waitlist_placeholder': 'your@email.com',
-    'waitlist_btn': 'Secure my spot',
+    'waitlist_btn': 'I want to be notified',
     'waitlist_success': "Great! We'll let you know soon 💛",
     'waitlist_trust': "Get an alert when new spots open up. No spam.",
 
@@ -133,7 +133,7 @@ const translations = {
     'waitlist_desc': 'Regístrate para asegurar tu lugar en la lista de espera y probar las novedades antes que nadie.',
     'waitlist_name_placeholder': 'Tu nombre',
     'waitlist_placeholder': 'tu@correo.com',
-    'waitlist_btn': 'Asegurar mi lugar',
+    'waitlist_btn': 'Quiero recibir una notificación',
     'waitlist_success': '¡Genial! Te avisaremos pronto 💛',
     'waitlist_trust': 'Recibe una alerta de nuevos lugares. Sin spam.',
 
