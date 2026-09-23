@@ -78,7 +78,7 @@ const translations = {
     sec_9_li1: "<strong>E-mail:</strong> <a href='mailto:privacidade@autkids.app'>privacidade@autkids.app</a>",
     sec_9_li2: "<strong>Endereço:</strong> Avenida Doutor Hercules Galletti, 260, Bloco 29, AP103 — Marília/SP",
 
-    footer_rights: `© ${currentYear} Autkids | CNPJ: 65.388.377/0001-00. All rights reserved`
+    footer_rights: `© ${currentYear} Autkids | CNPJ: 65.388.377/0001-05. Todos os direitos reservados`
   },
 
   en: {
@@ -158,7 +158,7 @@ const translations = {
     sec_9_li1: "<strong>Email:</strong> <a href='mailto:privacidade@autkids.app'>privacidade@autkids.app</a>",
     sec_9_li2: "<strong>Address:</strong> Avenida Doutor Hercules Galletti, 260, Bloco 29, AP103 — Marília/SP, Brazil",
 
-    footer_rights: `© ${currentYear} Autkids | CNPJ: 65.388.377/0001-00. All rights reserved`
+    footer_rights: `© ${currentYear} Autkids | CNPJ: 65.388.377/0001-05. All rights reserved`
   },
 
   es: {
@@ -238,7 +238,7 @@ const translations = {
     sec_9_li1: "<strong>Correo:</strong> <a href='mailto:privacidade@autkids.app'>privacidade@autkids.app</a>",
     sec_9_li2: "<strong>Dirección:</strong> Avenida Doutor Hercules Galletti, 260, Bloco 29, AP103 — Marília/SP, Brasil",
 
-    footer_rights: `© ${currentYear} Autkids | CNPJ: 65.388.377/0001-00. Todos los derechos reservados`
+    footer_rights: `© ${currentYear} Autkids | CNPJ: 65.388.377/0001-05. Todos los derechos reservados`
   }
 };
 

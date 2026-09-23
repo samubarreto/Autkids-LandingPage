@@ -2,77 +2,147 @@
 <html lang="pt-br">
 
 <head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TGWB62WX');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-09VLVJ3W4G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-09VLVJ3W4G');
+  </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="A high-tech augmentative communication app designed to empower children on the autism spectrum and support their inclusion in everyday life — coming soon.">
-  <meta property="og:title" content="Autkids">
-  <meta property="og:description" content="A high-tech augmentative communication app designed to empower children on the autism spectrum and support their inclusion in everyday life — coming soon.">
+  <meta name="description" content="Autkids é um aplicativo de comunicação aumentativa e alternativa para crianças autistas, com pictogramas, vozes por IA e um ambiente seguro e sem anúncios.">
+  <meta property="og:site_name" content="Autkids">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Autkids | Comunicação Alternativa para Crianças Autistas">
+  <meta property="og:description" content="Aplicativo de comunicação aumentativa e alternativa para crianças autistas, com pictogramas, vozes por IA e um ambiente seguro e sem anúncios.">
   <meta property="og:url" content="https://www.autkids.com/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://www.autkids.com/assets/logo_meta.png">
-  <meta property="og:image:width" content="128">
-  <meta property="og:image:height" content="128">
-  <meta property="og:image:alt" content="Autkids logo">
+  <meta property="og:image" content="https://www.autkids.com/assets/Lp_inicial/logo_meta.png">
+  <meta property="og:image:width" content="1000">
+  <meta property="og:image:height" content="1000">
+  <meta property="og:image:alt" content="Logo do Autkids">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Autkids | Comunicação Alternativa para Crianças Autistas">
+  <meta name="twitter:description" content="Aplicativo de comunicação aumentativa e alternativa para crianças autistas, com pictogramas, vozes por IA e um ambiente seguro e sem anúncios.">
+  <meta name="twitter:image" content="https://www.autkids.com/assets/Lp_inicial/logo_meta.png">
   <meta name="theme-color" content="#FFC107">
-  <title>Autkids</title>
+  <title>Autkids | Comunicação Alternativa para Crianças Autistas</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" href="assets/favicon.png" type="image/png">
-
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGWB62WX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="mobile-menu-overlay" id="menuOverlay"></div>
+
+  <div class="mobile-menu-drawer" id="menuDrawer" aria-hidden="true" role="dialog" aria-label="Menu de navegação">
+    <div class="mobile-menu-header">
+      <span>Autkids</span>
+      <button class="mobile-menu-close" id="menuClose" aria-label="Fechar menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-menu-nav">
+      <!-- Página de Planos ainda não publicada
+      <a href="pricing/pricing.html" class="menu-highlight" data-i18n="nav_pricing">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b8860b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        Planos
+      </a>
+      -->
+      <a href="faq/faq.html" data-i18n="footer_help">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        Central de Ajuda
+      </a>
+      <!-- Página Sobre Nós ainda não publicada
+      <a href="about-us/about_us.html" data-i18n="footer_about">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        Sobre Nós
+      </a>
+      -->
+      <a href="terms-of-use/terms.html" data-i18n="footer_terms">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        Termos de Uso
+      </a>
+      <a href="privacy-policy/privacy.html" data-i18n="footer_privacy">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Política de Privacidade
+      </a>
+    </nav>
+  </div>
 
   <header class="top-flags">
     <div class="language-selector">
 
-      <img src="assets/adaptive-icon.png" alt="Icon Autkids" class="top-icon" />
+      <!-- ── Hamburguer: LADO ESQUERDO, só mobile ── -->
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Abrir menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+
+      <img src="assets/Lp_inicial/adaptive-icon.png" alt="Icon Autkids" class="top-icon" />
 
       <div class="header-actions">
-
-        <!-- <a href="#comming-soon" class="header-btn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          <span data-i18n="btn_download_short"></span>
-        </a> -->
-
-        <!-- <a href="about-us/about_us.html" class="header-btn header-btn--outline">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12" y2="16.5" stroke-width="3" stroke-linecap="round"/></svg>
-          <span data-i18n="nav_about"></span>
-        </a> -->
+        <!-- Botões visíveis só no desktop -->
+        <!-- Página de Planos ainda não publicada
+        <a href="pricing/pricing.html" class="header-btn header-btn--outline">
+          <span data-i18n="nav_pricing">Planos</span>
+        </a>
+        -->
+        <a href="#waitlist" class="header-btn header-btn--download">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M10.27 2.82A2 2 0 0 1 13.73 2.82"/>
+            <path d="M18 8a6 6 0 0 0-12 0c0 4.5-2 6-2 6h16s-2-1.5-2-6"/>
+            <path d="M9.5 17a2.5 2.5 0 0 0 5 0"/>
+          </svg>
+          <span data-i18n="nav_download">Lista de espera</span>
+        </a>
 
         <div class="language-container-wrapper" style="position: relative;">
           <button class="language-trigger" id="langTrigger">
-            <img id="currentFlag" src="assets/brasil.png" alt="Idioma atual">
+            <img id="currentFlag" src="assets/bandeiras/brasil.png" alt="Idioma atual">
             <span id="currentLang"></span>
             <svg class="chevron" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-              <path d="M4.5 6L8 9.5L11.5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" fill="none" />
+              <path d="M4.5 6L8 9.5L11.5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
             </svg>
           </button>
-
           <div class="language-dropdown" id="langDropdown">
             <div class="language-grid">
               <button class="language-option" data-lang="pt" data-name="Português">
-                <img src="assets/brasil.png" alt="Brasil">
-                <span>Português</span>
+                <img src="assets/bandeiras/brasil.png" alt="Brasil"><span>Português</span>
               </button>
-
               <button class="language-option" data-lang="en" data-name="English">
-                <img src="assets/eua.png" alt="Estados Unidos">
-                <span>English</span>
+                <img src="assets/bandeiras/eua.png" alt="Estados Unidos"><span>English</span>
               </button>
-
               <button class="language-option" data-lang="es" data-name="Español">
-                <img src="assets/espanha.png" alt="Espanha">
-                <span>Español</span>
+                <img src="assets/bandeiras/espanha.png" alt="Espanha"><span>Español</span>
               </button>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </header>
@@ -80,121 +150,159 @@
   <header class="hero">
     <div class="hero-inner">
       <div class="hero-left">
-        <h1 data-i18n="hero_title">
-          <span class="highlight">Comunicar, aprender</span> e se<br />
+        <h1 id="hero-title" class="animate__animated animate__fadeInDown">
+          <span class="highlight tw-wrap"><span id="tw-word">Aprender</span></span><span id="hero-suffix"> e se<br />
           <span class="highlight">divertir</span> — tudo em um <br>
-          aplicativo seguro!
+          aplicativo seguro!</span>
         </h1>
 
-        <p class="lead" data-i18n="hero_desc">
-          Porque criança merece se comunicar com alegria — e nós estamos aqui para tornar essa experiência única
+        <p class="lead animate__animated animate__fadeInUp animate__delay-1s" data-i18n="hero_desc">
+          Toda criança merece se comunicar com alegria — e nós estamos aqui para tornar essa experiência única
         </p>
 
-        <a class="btn primary btn-download" href="#comming-soon">
+        <!-- Botão "Autkids / Entrar na lista de espera" comentado
+        <a class="btn primary btn-download animate__animated animate__fadeInUp animate__delay-1s" href="#waitlist">
           <img src="assets/icon-Autkids.png" alt="Logo Autkids" class="btn-icon">
           <div class="btn-text">
             <div class="app-name">Autkids</div>
             <div class="app-cta" data-i18n="btn_download"></div>
           </div>
         </a>
+        -->
       </div>
 
       <div class="hero-right">
         <div class="logo-card">
-          <img src="assets/LogoAutkids.png" alt="Logo Autkids" />
+          <img src="assets/Lp_inicial/LogoAutkids.png" alt="Logo Autkids" />
         </div>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="why" id="about">
-      <h2 class="section-title" data-i18n="section_why"></h2>
-      <div class="features">
+    <section class="youtube-tutorials" id="tutorial-youtube">
+      <h2 class="section-title" data-i18n="whatis_title" data-aos="fade-up" data-aos-duration="700"></h2>
+      <div class="whatis-grid">
+        <div class="whatis-media" data-aos="fade-right" data-aos-duration="700">
+          <button class="yt-a-thumb-link" type="button" id="ytPlayBtn" data-video-id="" aria-label="Assistir vídeo do Autkids no YouTube">
+            <div class="yt-a-thumb-wrap">
+              <img src="assets/mockup_telas/printapp.png" alt="Tutorial Autkids no YouTube" class="yt-a-thumb-img">
+              <div class="yt-a-thumb-overlay">
+                <div class="yt-a-play-btn">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                </div>
+              </div>
+            </div>
+          </button>
+          <!-- Botão "Quero na minha Clínica!" comentado
+          <a href="pricing/pricing.html" class="whatis-cta" data-i18n="whatis_cta"></a>
+          <a href="#waitlist" class="whatis-cta" data-i18n="whatis_cta"></a>
+          -->
+        </div>
+        <div class="whatis-text" data-aos="fade-left" data-aos-duration="700" data-aos-delay="100">
+          <p data-i18n="whatis_p1"></p>
+          <p class="whatis-p2" data-i18n="whatis_p2"></p>
+        </div>
+      </div>
+    </section>
 
-        <article class="feature">
-          <div class="icon">
-            <img src="assets/ilustracao2.png" alt="Icone Personalizável">
-          </div>
+    <section class="why" id="about">
+      <h2 class="section-title" data-i18n="section_why"
+          data-aos="fade-up" data-aos-duration="700"></h2>
+      <div class="features">
+        <article class="feature" data-aos="fade-right" data-aos-duration="700" data-aos-delay="0">
+          <div class="icon"><img src="assets/Lp_inicial/ilustracao2.png" alt="Icone Personalizável"></div>
           <div class="feature-content">
             <h3 data-i18n="feature_1_title"></h3>
             <p data-i18n="feature_1_desc"></p>
           </div>
         </article>
-
-        <article class="feature">
-          <div class="icon">
-            <img src="assets/segurança.png " width="80px" alt="Icone Ambiente Seguro">
-          </div>
+        <article class="feature" data-aos="fade-left" data-aos-duration="700" data-aos-delay="100">
+          <div class="icon"><img src="assets/Lp_inicial/segurança.png" width="80px" alt="Icone Ambiente Seguro"></div>
           <div class="feature-content">
             <h3 data-i18n="feature_2_title"></h3>
-            <p data-i18n="feature_2_desc">
-            </p>
+            <p data-i18n="feature_2_desc"></p>
           </div>
         </article>
-
-        <article class="feature">
-          <div class="icon">
-            <img src="assets/ilustração.png" alt="Icone Comunicação">
-          </div>
+        <article class="feature" data-aos="fade-right" data-aos-duration="700" data-aos-delay="100">
+          <div class="icon"><img src="assets/Lp_inicial/ilustração.png" alt="Icone Comunicação"></div>
           <div class="feature-content">
             <h3 data-i18n="feature_3_title"></h3>
             <p data-i18n="feature_3_desc"></p>
           </div>
         </article>
-
-        <article class="feature">
-          <div class="icon">
-            <img src="assets/icone_ajuda.png" alt="Icone Parceria">
-          </div>
+        <article class="feature" data-aos="fade-left" data-aos-duration="700" data-aos-delay="100">
+          <div class="icon"><img src="assets/Lp_inicial/icone_ajuda.png" alt="Icone Parceria"></div>
           <div class="feature-content">
             <h3 data-i18n="feature_4_title"></h3>
             <p data-i18n="feature_4_desc"></p>
           </div>
         </article>
-
       </div>
     </section>
 
-    <!-- SEÇÃO AUTKIDS ESTÁ CHEGANDO -->
     <section id="comming-soon" class="pricing">
       <div class="pricing-inner">
-        <div class="pricing-left">
-          <div class="coming-soon-badge" data-i18n="_badge">
-            O Autkids está chegando!
+        <div class="pricing-left" data-aos="fade-up" data-aos-duration="700">
+          <div class="coming-soon-badge" data-i18n="coming_soon_badge">Em breve</div>
+          <h3 data-i18n="pricing_title">Seja um dos primeiros a saber quando o Autkids chegar!</h3>
+          <p class="pricing-desc" data-i18n="pricing_desc"></p>
+          <!-- Botão preto "Entrar na lista de espera" comentado
+          <div class="stores">
+            <a href="#waitlist" class="store-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+              <div class="store-btn-text">
+                <span class="store-line2" data-i18n="waitlist_cta_btn">Entrar na lista de espera</span>
+              </div>
+            </a>
           </div>
-          <h3 data-i18n="pricing_title">Nossos personagens são desenhados para serem amigáveis e acolhedores, criando uma experiência inclusiva para todas as crianças.</h3>
+          -->
         </div>
-
-        <div class="pricing-right">
+        <div class="pricing-right" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
           <div class="mockup-carousel">
-            <!-- Slide 1 -->
             <div class="mockup-slide" data-index="0">
-              <img src="assets/personagem.png" alt="Personagem 1">
+              <div class="tablet">
+                <div class="tablet-screen">
+                  <img class="tablet-print" src="assets/mockup_telas/printinicial.png" alt="Tela inicial do app Autkids">
+                </div>
+              </div>
             </div>
-            <!-- Slide 2 -->
             <div class="mockup-slide" data-index="1">
-              <img src="assets/personagem2.png" alt="Personagem 2">
+              <div class="tablet">
+                <div class="tablet-screen">
+                  <img class="tablet-print" src="assets/mockup_telas/printapp.png" alt="Prancha de comunicação com pictogramas do Autkids">
+                </div>
+              </div>
             </div>
-            <!-- Slide 3 -->
             <div class="mockup-slide" data-index="2">
-              <img src="assets/personagem3.png" alt="Personagem 3">
+              <div class="tablet">
+                <div class="tablet-screen">
+                  <img class="tablet-print" src="assets/mockup_telas/printjogos.jpeg" alt="Menu de jogos educativos do Autkids">
+                </div>
+              </div>
             </div>
-            <!-- Slide 4 -->
             <div class="mockup-slide" data-index="3">
-              <img src="assets/personagem4.png" alt="Personagem 4">
+              <div class="tablet">
+                <div class="tablet-screen">
+                  <img class="tablet-print" src="assets/mockup_telas/printconfigs.png" alt="Tela de configurações do Autkids">
+                </div>
+              </div>
             </div>
-            <!-- Slide 5 -->
             <div class="mockup-slide" data-index="4">
-              <img src="assets/personagem5.png" alt="Personagem 5">
+              <div class="tablet">
+                <div class="tablet-screen">
+                  <img class="tablet-print" src="assets/mockup_telas/printpranchas.png" alt="Lista de pranchas personalizadas do Autkids">
+                </div>
+              </div>
             </div>
-            <!-- Slide 6 -->
             <div class="mockup-slide" data-index="5">
-              <img src="assets/personagem6.png" alt="Personagem 6">
+              <div class="tablet">
+                <div class="tablet-screen">
+                  <img class="tablet-print" src="assets/mockup_telas/printedition.png" alt="Modo de edição de prancha do Autkids">
+                </div>
+              </div>
             </div>
           </div>
-
-          <!-- Indicadores -->
           <div class="carousel-indicators">
             <span class="carousel-indicator active" data-index="0"></span>
             <span class="carousel-indicator" data-index="1"></span>
@@ -207,149 +315,138 @@
       </div>
     </section>
 
-   <section class="media">
-  <h2 class="section-title" data-i18n="section_media">#Autkids na mídia</h2>
+    <!-- WAITLIST -->
+    <section class="waitlist-section" id="waitlist">
+      <div class="waitlist-card">
+        <div class="waitlist-content">
+          <h2 data-i18n="waitlist_title"></h2>
+          <p data-i18n="waitlist_desc"></p>
 
-  <div class="media-carousel-wrapper">
-    <!-- Botão anterior -->
-    <button class="media-carousel-btn media-prev-btn" aria-label="Anterior">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M15 18l-6-6 6-6"/>
-      </svg>
-    </button>
-
-    <div class="media-carousel-track-container">
-      <div class="media-carousel-track">
-
-        <!-- Item 1 -->
-        <div class="media-card">
-          <a href="https://www.visaonoticias.com/noticia/projeto-de-academicos-do-univem-transforma-a-comunicacao-para-criancas-no-espectro-autista-57443"
-            target="_blank" rel="noopener noreferrer">
-            <div class="media-thumb">
-              <img src="assets/integrantes.jpg" alt="Destaque em Evento">
-              <div class="media-overlay">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <div class="waitlist-form" id="waitlistForm">
+            <div class="waitlist-form-row">
+              <div class="waitlist-input-wrap">
+                <svg class="waitlist-input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <input type="text" id="waitlistName" autocomplete="name" />
+              </div>
+              <div class="waitlist-input-wrap">
+                <svg class="waitlist-input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+                <input type="email" id="waitlistEmail" autocomplete="email" />
               </div>
             </div>
-            <p data-i18n="media_1"></p>
-          </a>
+            <button id="waitlistBtn" type="button">
+              <span class="waitlist-btn-text" data-i18n="waitlist_btn"></span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
+
+          <div class="waitlist-success" id="waitlistSuccess">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="waitlist_success"></span>
+          </div>
+          <div class="waitlist-error" id="waitlistError">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c62828" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span id="waitlistErrorText"></span>
+          </div>
+
+          <p class="waitlist-trust">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            <span data-i18n="waitlist_trust"></span>
+          </p>
         </div>
 
-        <!-- Item 2 -->
-        <div class="media-card">
-          <a href="https://revista.univem.edu.br/REGRAD/article/view/3767" target="_blank" rel="noopener noreferrer">
-            <div class="media-thumb">
-              <img src="assets/regrad.png" alt="Reconhecimento Científico" style="object-position: top;">
-              <div class="media-overlay">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </div>
-            </div>
-            <p data-i18n="media_2"></p>
-          </a>
+        <div class="waitlist-image">
+          <img src="assets/Lp_inicial/imgi_13_width_800.png" alt="Imagem da lista de espera" />
         </div>
-
-        <!-- Item 3 -->
-        <div class="media-card">
-          <a href="https://www.youtube.com/@Autkids01" target="_blank" rel="noopener noreferrer">
-            <div class="media-thumb">
-              <img src="assets/certificado_univem.jpeg" alt="Projeto Premiado">
-              <div class="media-overlay">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </div>
-            </div>
-            <p data-i18n="media_3"></p>
-          </a>
-        </div>
-
-        <div class="media-card">
-          <a href="https://www.instagram.com/p/DVdzrLdEY96/?igsh=d29vaHQ0dHkyZWR4" target="_blank" rel="noopener noreferrer">
-            <div class="media-thumb">
-              <img src="assets/visita_espaco_potencial.jpeg" alt="Visita ao Espaço Potencial">
-              <div class="media-overlay">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </div>
-            </div>
-            <p data-i18n="media_4"></p>
-          </a>
-        </div>
-
       </div>
-    </div>
-
-    <!-- Botão próximo -->
-    <button class="media-carousel-btn media-next-btn" aria-label="Próximo">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M9 18l6-6-6-6"/>
-      </svg>
-    </button>
-  </div>
-
-  <!-- Dots -->
-  <div class="media-carousel-dots"></div>
-</section>
+    </section>
 
   </main>
 
   <footer class="site-footer">
     <div class="footer-top">
       <div class="footer-inner">
-
-        <div class="brand">
-          <div class="logo">
-            <img src="assets/LogoAutkids.png" alt="Logo Autkids">
-          </div>
+        <div class="brand" data-aos="fade-up" data-aos-duration="600">
+          <div class="logo"><img src="assets/Lp_inicial/LogoAutkids.png" alt="Logo Autkids"></div>
         </div>
-
-        <nav class="footer-links">
+        <nav class="footer-links" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
           <a href="faq/faq.html" data-i18n="footer_help">Central de Ajuda</a>
+          <!-- Página Sobre Nós ainda não publicada
+          <a href="about-us/about_us.html" data-i18n="footer_about">Sobre Nós</a>
+          -->
           <a href="terms-of-use/terms.html" data-i18n="footer_terms">Termos de Uso</a>
           <a href="privacy-policy/privacy.html" data-i18n="footer_privacy">Política de Privacidade</a>
         </nav>
-
-        <div class="footer-right-group">
+        <div class="footer-right-group" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
           <div class="social-group">
             <span data-i18n="footer_social"></span>
             <div class="social-links">
               <a href="https://instagram.com/autkids_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFC107">
-                  <path
-                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
-                  </path>
-                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
               </a>
               <a href="https://www.youtube.com/@Autkids01" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFC107">
-                  <path
-                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFC107"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
               </a>
               <a href="https://www.linkedin.com/company/autkids/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFC107">
-                  <path
-                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFC107"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
               </a>
-              <a href ="mailto:suporte@autkids.com" target="_blank" aria-label="Email">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFC107">
-                   <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                </svg>
+              <a href="mailto:suporte@autkids.com" target="_blank" aria-label="Email">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFC107"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
               </a>
               <a href="https://www.tiktok.com/@autkids.oficial" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-              <svg width="24" height="24" viewBox="0 0 16 16" fill="#FFC107">
-               <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
-               </svg>
+                <svg width="24" height="24" viewBox="0 0 16 16" fill="#FFC107"><path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/></svg>
               </a>
             </div>
           </div>
         </div>
-
       </div>
     </div>
-
     <div class="copyright-bar" data-i18n="footer_rights"></div>
   </footer>
+
+  <!-- YouTube Modal -->
+  <div class="yt-modal-overlay" id="ytModal" role="dialog" aria-modal="true" aria-label="Vídeo Autkids">
+    <div class="yt-modal-box">
+      <button class="yt-modal-close" id="ytModalClose" aria-label="Fechar vídeo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <iframe id="ytModalIframe" frameborder="0" allowfullscreen allow="autoplay; encrypted-media; picture-in-picture"></iframe>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="translation.js"></script>
   <script src="script.js"></script>
-</body>
 
+
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+
+  /* O botão real do VLibras é renderizado dentro de um Shadow DOM
+     (#vlibras-access-wrapper) com "top: calc(50vh - 20px)" embutido no
+     próprio widget, o que o centraliza verticalmente e sobrepõe o
+     conteúdo da página. CSS externo não alcança o Shadow DOM, então
+     a correção precisa injetar um <style> diretamente dentro dele. */
+  (function fixVLibrasPosition() {
+    var wrapper = document.getElementById('vlibras-access-wrapper');
+    if (wrapper && wrapper.shadowRoot) {
+      var style = document.createElement('style');
+      style.textContent = '#vlibras-access { top: auto !important; bottom: 20px !important; }';
+      wrapper.shadowRoot.appendChild(style);
+      return;
+    }
+    setTimeout(fixVLibrasPosition, 300);
+  })();
+</script>
+
+</body>
 </html>

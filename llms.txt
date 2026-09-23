@@ -1,0 +1,25 @@
+# Autkids
+
+> Autkids é um aplicativo de comunicação aumentativa e alternativa (CAA) que ajuda crianças autistas e não oralizadas a se comunicarem por meio de cartões com imagens, textos e áudios gerados por IA, em um ambiente seguro e sem anúncios.
+
+Autkids nasceu como um projeto de pesquisa acadêmica dentro da universidade, com o propósito de dar às crianças autistas uma forma mais simples e acessível de se expressar e se conectar com o mundo. A criança usa uma experiência simples e protegida, enquanto responsáveis e profissionais configuram o conteúdo e acompanham o uso.
+
+O aplicativo ainda não foi lançado nas lojas (App Store / Google Play): o site está em fase de pré-lançamento, e os visitantes podem entrar em uma lista de espera para serem avisados assim que o app estiver disponível.
+
+## Páginas
+
+- [Início](https://www.autkids.com/): Apresentação do app e funcionalidades, vídeo demonstrativo e chamada para entrar na lista de espera do lançamento.
+- [Planos](https://www.autkids.com/pricing/pricing.html): Planos Gratuito, Essencial, Família e Profissional, com preços mensais/anuais e tabela comparativa de recursos (pranchas, cards personalizados, áudios com IA, jogos).
+- [Central de Ajuda](https://www.autkids.com/faq/faq.html): Perguntas frequentes sobre o app, conta, privacidade e segurança de dados, planos e pagamento, dispositivos compatíveis e suporte.
+- [Sobre Nós](https://www.autkids.com/about-us/about_us.html): História do projeto, missão, visão, linha do tempo, valores e equipe.
+- [Política de Privacidade](https://www.autkids.com/privacy-policy/privacy.html): Tratamento de dados pessoais e da criança.
+- [Termos de Uso](https://www.autkids.com/terms-of-use/terms.html): Condições de uso do aplicativo e do site.
+
+## Público
+
+Famílias de crianças autistas ou com necessidade de apoio na comunicação e rotina, além de clínicas, escolas e profissionais (terapeutas, fonoaudiólogos, psicólogos) que atendem essas crianças.
+
+## Contato
+
+- E-mail: suporte@autkids.com
+- Instagram: https://www.instagram.com/autkids_

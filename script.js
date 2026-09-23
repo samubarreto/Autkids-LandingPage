@@ -1,108 +1,72 @@
 document.addEventListener('DOMContentLoaded', () => {
-  
+
   /* ============================================================
-      1. CARREGAR IDIOMA SALVO (TODAS AS PÁGINAS)
+      1. INICIALIZAR IDIOMA
   ============================================================ */
-  function loadSavedLanguage() {
-    const savedLang = localStorage.getItem('autkids-language') || 'pt';
-    
-    // Atualizar atributo lang do HTML
-    document.documentElement.lang = savedLang;
-    
-    // Chamar função de tradução (se existir)
-    if(typeof changeLanguage === 'function') {
-      changeLanguage(savedLang);
-    }
+  const savedLang = localStorage.getItem('autkids-language') || 'pt';
+  document.documentElement.lang = savedLang;
+  if (typeof changeLanguage === 'function') {
+    changeLanguage(savedLang);
   }
-
-  // SEMPRE carregar idioma salvo ao iniciar qualquer página
-  loadSavedLanguage();
+  updateHeroTitle(savedLang);
 
   /* ============================================================
-      2. SELETOR DE IDIOMAS (APENAS PÁGINA INICIAL)
+      2. SELETOR DE IDIOMAS
   ============================================================ */
-  const langTrigger = document.getElementById('langTrigger');
-  const langDropdown = document.getElementById('langDropdown');
-  const currentFlag = document.getElementById('currentFlag');
-  const currentLang = document.getElementById('currentLang');
+  const langTrigger     = document.getElementById('langTrigger');
+  const langDropdown    = document.getElementById('langDropdown');
+  const currentFlag     = document.getElementById('currentFlag');
+  const currentLang     = document.getElementById('currentLang');
   const languageOptions = document.querySelectorAll('.language-option');
 
-  // Só executa se o dropdown existir na página
-  if(langTrigger && langDropdown) {
-    
-    // Configurações de idiomas
+  if (langTrigger && langDropdown) {
+
     const languages = {
-      pt: {
-        name: 'Português',
-        flag: 'assets/brasil.png'
-      },
-      en: {
-        name: 'English',
-        flag: 'assets/eua.png'
-      },
-      es: {
-        name: 'Español',
-        flag: 'assets/espanha.png'
-      }
+      pt: { name: 'Português', flag: 'assets/bandeiras/brasil.png' },
+      en: { name: 'English',   flag: 'assets/bandeiras/eua.png'    },
+      es: { name: 'Español',   flag: 'assets/bandeiras/espanha.png' }
     };
 
-    // Função para aplicar idioma
+    const languageLabels = {
+      pt: { pt: 'Português', en: 'Inglês',    es: 'Espanhol'  },
+      en: { pt: 'Portuguese', en: 'English',  es: 'Spanish'   },
+      es: { pt: 'Portugués',  en: 'Inglés',   es: 'Español'   }
+    };
+
     function applyLanguage(lang) {
-      if(!languages[lang]) return;
-      
-      // Atualizar interface do dropdown
+      if (!languages[lang]) return;
       currentFlag.src = languages[lang].flag;
-      currentLang.textContent = languages[lang].name;
-      
-      // Marcar opção ativa
+      currentLang.textContent = languageLabels[lang][lang];
       languageOptions.forEach(opt => {
-        if(opt.dataset.lang === lang) {
-          opt.classList.add('active');
-        } else {
-          opt.classList.remove('active');
-        }
+        const optionLang = opt.dataset.lang;
+        const labelEl = opt.querySelector('span');
+        if (labelEl) labelEl.textContent = languageLabels[lang][optionLang] || opt.dataset.name;
+        opt.classList.toggle('active', opt.dataset.lang === lang);
       });
-      
-      // Salvar no localStorage
-      localStorage.setItem('autkids-language', lang);
-      
-      // Atualizar atributo lang do HTML
       document.documentElement.lang = lang;
-      
-      // Chamar função de tradução
-      if(typeof changeLanguage === 'function') {
-        changeLanguage(lang);
-      }
+      if (typeof changeLanguage === 'function') changeLanguage(lang);
+      updateHeroTitle(lang);
+      if (typeof window.twRestart === 'function') window.twRestart(lang);
     }
 
-    // Carregar idioma salvo no dropdown
-    const savedLang = localStorage.getItem('autkids-language') || 'pt';
     applyLanguage(savedLang);
 
-    // Toggle dropdown
-    langTrigger.addEventListener('click', (e) => {
+    langTrigger.addEventListener('click', e => {
       e.stopPropagation();
       langTrigger.classList.toggle('active');
       langDropdown.classList.toggle('active');
     });
 
-    // Fechar dropdown ao clicar fora
-    document.addEventListener('click', (e) => {
+    document.addEventListener('click', e => {
       if (!e.target.closest('.language-selector')) {
         langTrigger.classList.remove('active');
         langDropdown.classList.remove('active');
       }
     });
 
-    // Selecionar idioma
     languageOptions.forEach(option => {
       option.addEventListener('click', () => {
-        const lang = option.dataset.lang;
-        
-        // Aplicar idioma selecionado
-        applyLanguage(lang);
-        
-        // Fechar dropdown
+        applyLanguage(option.dataset.lang);
         langTrigger.classList.remove('active');
         langDropdown.classList.remove('active');
       });
@@ -110,307 +74,310 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ============================================================
-      3. ANIMAÇÃO DE SCROLL (SCROLL REVEAL)
+      3. MENU HAMBURGUER (MOBILE)
   ============================================================ */
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.15
-  };
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const menuDrawer   = document.getElementById('menuDrawer');
+  const menuOverlay  = document.getElementById('menuOverlay');
+  const menuClose    = document.getElementById('menuClose');
 
-  const observerCallback = (entries, observer) => {
+  if (hamburgerBtn && menuDrawer && menuOverlay && menuClose) {
+    function openMenu() {
+      menuDrawer.classList.add('open');
+      menuOverlay.classList.add('open');
+      menuDrawer.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+      menuDrawer.classList.remove('open');
+      menuOverlay.classList.remove('open');
+      menuDrawer.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+    hamburgerBtn.addEventListener('click', openMenu);
+    menuClose.addEventListener('click', closeMenu);
+    menuOverlay.addEventListener('click', closeMenu);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+  }
+
+  /* ============================================================
+      4. SCROLL REVEAL
+  ============================================================ */
+  const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
-        observer.unobserve(entry.target); 
+        obs.unobserve(entry.target);
       }
     });
-  };
+  }, { root: null, rootMargin: '0px', threshold: 0.15 });
 
-  const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-  const elementsToAnimate = document.querySelectorAll(
+  document.querySelectorAll(
     'section, .hero-left, .hero-right, .feature, .pricing-left, .pricing-right, .media-item, .testi'
-  );
-
-  elementsToAnimate.forEach(el => {
+  ).forEach(el => {
     el.classList.add('reveal');
     observer.observe(el);
   });
 
   /* ============================================================
-      4. CARROSSEL DE DEPOIMENTOS
-  ============================================================ */
-  let currentSlide = 0;
-  const slides = document.querySelectorAll('.testi-slide');
-  const dots = document.querySelectorAll('.dot');
-  const totalSlides = slides.length;
-  let autoSlide; 
-
-  if(slides.length > 0 && dots.length > 0) {
-    
-    function showSlide(index) {
-      slides.forEach(slide => slide.classList.remove('active'));
-      dots.forEach(dot => dot.classList.remove('active'));
-      
-      slides[index].classList.add('active');
-      dots[index].classList.add('active');
-    }
-
-    function nextSlide() {
-      currentSlide = (currentSlide + 1) % totalSlides;
-      showSlide(currentSlide);
-    }
-
-    function goToSlide(index) {
-      currentSlide = index;
-      showSlide(currentSlide);
-    }
-
-    dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        goToSlide(index);
-        clearInterval(autoSlide);
-        autoSlide = setInterval(nextSlide, 4000);
-      });
-    });
-
-    autoSlide = setInterval(nextSlide, 4000);
-
-    const carousel = document.querySelector('.testimonials-carousel');
-    if(carousel) {
-      carousel.addEventListener('mouseenter', () => {
-        clearInterval(autoSlide);
-      });
-
-      carousel.addEventListener('mouseleave', () => {
-        autoSlide = setInterval(nextSlide, 2000);
-      });
-    }
-  }
-
-  /* ============================================================
       5. CAROUSEL 3D DE PERSONAGENS
   ============================================================ */
   const mockupSlides = document.querySelectorAll('.mockup-slide');
-  const prevBtn = document.querySelector('.prev-btn');
-  const nextBtn = document.querySelector('.next-btn');
-  const indicators = document.querySelectorAll('.carousel-indicator');
-  
-  let currentMockupIndex = 0;
-  let autoRotateInterval;
-  const totalMockupSlides = mockupSlides.length;
+  const prevBtn      = document.querySelector('.prev-btn');
+  const nextBtn      = document.querySelector('.next-btn');
+  const indicators   = document.querySelectorAll('.carousel-indicator');
 
-  // Função para calcular a posição de cada slide no carousel circular
-  function getSlidePosition(slideIndex, currentIndex, total) {
-    const diff = ((slideIndex - currentIndex) + total) % total;
-    
-    if (diff === 0) return 'center';
-    if (diff === 1) return 'right-1';
-    if (diff === 2) return 'right-2';
-    if (diff === total - 1) return 'left-1';
-    if (diff === total - 2) return 'left-2';
+  if (mockupSlides.length === 0) return;
+
+  let currentIndex = 0;
+  const total = mockupSlides.length;
+  let autoRotate;
+
+  function getPosition(slideIndex, current, n) {
+    const diff = ((slideIndex - current) + n) % n;
+    if (diff === 0)     return 'center';
+    if (diff === 1)     return 'right-1';
+    if (diff === 2)     return 'right-2';
+    if (diff === n - 1) return 'left-1';
+    if (diff === n - 2) return 'left-2';
     return 'hidden';
   }
 
-  // Função para atualizar as posições de todos os slides
-  function updateMockupCarousel() {
-    mockupSlides.forEach((slide, index) => {
-      // Remove todas as classes de posição
+  function updateCarousel() {
+    mockupSlides.forEach((slide, i) => {
       slide.classList.remove('center', 'right-1', 'right-2', 'left-1', 'left-2', 'hidden');
-      
-      // Adiciona a classe correspondente à posição atual
-      const position = getSlidePosition(index, currentMockupIndex, totalMockupSlides);
-      slide.classList.add(position);
+      slide.classList.add(getPosition(i, currentIndex, total));
     });
+    indicators.forEach((ind, i) => ind.classList.toggle('active', i === currentIndex));
+  }
 
-    // Atualiza os indicadores
-    indicators.forEach((indicator, index) => {
-      if (index === currentMockupIndex) {
-        indicator.classList.add('active');
-      } else {
-        indicator.classList.remove('active');
+  function next() { currentIndex = (currentIndex + 1) % total; updateCarousel(); }
+  function prev() { currentIndex = (currentIndex - 1 + total) % total; updateCarousel(); }
+  function goTo(i) { currentIndex = i; updateCarousel(); }
+  function resetTimer() { clearInterval(autoRotate); autoRotate = setInterval(next, 2500); }
+
+  updateCarousel();
+  resetTimer();
+
+  if (prevBtn) prevBtn.addEventListener('click', () => { prev(); resetTimer(); });
+  if (nextBtn) nextBtn.addEventListener('click', () => { next(); resetTimer(); });
+  indicators.forEach((ind, i) => ind.addEventListener('click', () => { goTo(i); resetTimer(); }));
+  mockupSlides.forEach((slide, i) => {
+    slide.addEventListener('click', () => { if (i !== currentIndex) { goTo(i); resetTimer(); } });
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft')  { prev(); resetTimer(); }
+    if (e.key === 'ArrowRight') { next(); resetTimer(); }
+  });
+
+  /* ============================================================
+      6. AOS
+  ============================================================ */
+  if (typeof AOS !== 'undefined') {
+    AOS.init({
+      duration : 700,
+      easing   : 'ease-out',
+      once     : true,
+      offset   : 80,
+      disable  : window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    });
+  }
+
+  /* ============================================================
+      7. TYPEWRITER — integrado ao sistema de idiomas
+         As palavras e o sufixo do título mudam por idioma.
+         Não usa data-i18n no h1 para preservar o span#tw-word.
+  ============================================================ */
+  const twWords = {
+    pt: ['Aprender', 'Evoluir', 'Expressar'],
+    en: ['Learn',    'Grow',    'Express'  ],
+    es: ['Aprender', 'Crecer',  'Expresar' ]
+  };
+
+  const twEl = document.getElementById('tw-word');
+  let twTimer = null;
+  let twWi = 0, twCi = 0, twDeleting = false;
+
+  function twTick(lang) {
+    const words = twWords[lang] || twWords.pt;
+    const word  = words[twWi % words.length];
+
+    if (!twDeleting) {
+      twCi++;
+      twEl.textContent = word.slice(0, twCi);
+      if (twCi === word.length) {
+        twDeleting = true;
+        twTimer = setTimeout(() => twTick(lang), 1600);
+        return;
       }
-    });
-  }
-
-  // Função para ir para o próximo slide
-  function nextMockup() {
-    currentMockupIndex = (currentMockupIndex + 1) % totalMockupSlides;
-    updateMockupCarousel();
-  }
-
-  // Função para ir para o slide anterior
-  function prevMockup() {
-    currentMockupIndex = (currentMockupIndex - 1 + totalMockupSlides) % totalMockupSlides;
-    updateMockupCarousel();
-  }
-
-  // Função para ir para um slide específico
-  function goToMockup(index) {
-    currentMockupIndex = index;
-    updateMockupCarousel();
-  }
-
-  // Função para iniciar a rotação automática
-  function startAutoRotate() {
-    autoRotateInterval = setInterval(nextMockup, 2500);
-  }
-
-  // Função para parar a rotação automática
-  function stopAutoRotate() {
-    clearInterval(autoRotateInterval);
-  }
-
-  // Se houver slides de mockup, inicia o carrossel
-  if (mockupSlides.length > 0) {
-    // Inicializa o carousel
-    updateMockupCarousel();
-    
-    // Inicia a rotação automática
-    startAutoRotate();
-
-    // Event listeners para os botões de navegação
-    if (prevBtn && nextBtn) {
-      prevBtn.addEventListener('click', () => {
-        prevMockup();
-        stopAutoRotate();
-        startAutoRotate(); // Reinicia o timer
-      });
-
-      nextBtn.addEventListener('click', () => {
-        nextMockup();
-        stopAutoRotate();
-        startAutoRotate(); // Reinicia o timer
-      });
+      twTimer = setTimeout(() => twTick(lang), 90);
+    } else {
+      twCi--;
+      twEl.textContent = word.slice(0, twCi);
+      if (twCi === 0) {
+        twDeleting = false;
+        twWi = (twWi + 1) % words.length;
+        twTimer = setTimeout(() => twTick(lang), 300);
+        return;
+      }
+      twTimer = setTimeout(() => twTick(lang), 55);
     }
+  }
 
-    // Event listeners para os indicadores
-    indicators.forEach((indicator, index) => {
-      indicator.addEventListener('click', () => {
-        goToMockup(index);
-        stopAutoRotate();
-        startAutoRotate(); // Reinicia o timer
-      });
+  /* Inicia com a primeira palavra já escrita, typewriter começa após 1.8s */
+  function twRestart(lang) {
+    clearTimeout(twTimer);
+    twWi = 0;
+    const words = twWords[lang] || twWords.pt;
+    twEl.textContent = words[0];
+    twCi = words[0].length;
+    twDeleting = true;
+    twTimer = setTimeout(() => twTick(lang), 1800);
+  }
+
+  /* Expõe globalmente para applyLanguage() chamar ao trocar idioma */
+  window.twRestart = twRestart;
+
+  if (twEl) {
+    const initLang = localStorage.getItem('autkids-language') || 'pt';
+    twRestart(initLang);
+  }
+
+  /* ============================================================
+      8. updateHeroTitle — atualiza sufixo do título por idioma
+         sem tocar no span#tw-word
+  ============================================================ */
+
+  /* ============================================================
+      9. YOUTUBE MODAL — iframe carrega só no clique do play
+  ============================================================ */
+  const ytPlayBtn    = document.getElementById('ytPlayBtn');
+  const ytModal      = document.getElementById('ytModal');
+  const ytModalClose = document.getElementById('ytModalClose');
+  const ytIframe     = document.getElementById('ytModalIframe');
+
+  if (ytPlayBtn && ytModal && ytIframe) {
+    function openYtModal() {
+      const vid = ytPlayBtn.dataset.videoId;
+      if (!vid) { window.open('https://www.youtube.com/@Autkids01', '_blank', 'noopener,noreferrer'); return; }
+      ytIframe.src = `https://www.youtube.com/embed/${vid}?autoplay=1&rel=0`;
+      ytModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeYtModal() {
+      ytModal.classList.remove('open');
+      ytIframe.src = '';
+      document.body.style.overflow = '';
+    }
+    ytPlayBtn.addEventListener('click', openYtModal);
+    if (ytModalClose) ytModalClose.addEventListener('click', closeYtModal);
+    ytModal.addEventListener('click', e => { if (e.target === ytModal) closeYtModal(); });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && ytModal.classList.contains('open')) closeYtModal();
     });
+  }
 
-    // Event listeners para os próprios slides (clique para navegar)
-    mockupSlides.forEach((slide, index) => {
-      slide.addEventListener('click', () => {
-        if (index !== currentMockupIndex) {
-          goToMockup(index);
-          stopAutoRotate();
-          startAutoRotate(); // Reinicia o timer
+  /* ============================================================
+      WAITLIST (captação de e-mail — pré-lançamento)
+  ============================================================ */
+  const WAITLIST_API_BASE_URL = 'https://api.autkids.tech';
+
+  // Mesmo enum de idioma usado pela API de marketing (0=pt, 2=en, 3=es)
+  const WAITLIST_LANGUAGE_CODES = { pt: 0, en: 2, es: 3 };
+
+  const waitlistBtn       = document.getElementById('waitlistBtn');
+  const waitlistBtnText   = waitlistBtn ? waitlistBtn.querySelector('.waitlist-btn-text') : null;
+  const waitlistName      = document.getElementById('waitlistName');
+  const waitlistEmail     = document.getElementById('waitlistEmail');
+  const waitlistForm      = document.getElementById('waitlistForm');
+  const waitlistSuccess   = document.getElementById('waitlistSuccess');
+  const waitlistError     = document.getElementById('waitlistError');
+  const waitlistErrorText = document.getElementById('waitlistErrorText');
+
+  async function readWaitlistResponse(response) {
+    const contentType = response.headers.get('content-type') || '';
+    if (contentType.includes('application/json')) return response.json();
+    return { message: await response.text() };
+  }
+
+  if (waitlistBtn && waitlistEmail) {
+    const submitWaitlist = async () => {
+      const email = waitlistEmail.value.trim();
+      const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+      if (waitlistError) waitlistError.style.display = 'none';
+
+      if (!valid) {
+        waitlistEmail.style.borderColor = '#e57373';
+        waitlistEmail.focus();
+        setTimeout(() => { waitlistEmail.style.borderColor = ''; }, 2000);
+        return;
+      }
+
+      const lang = localStorage.getItem('autkids-language') || 'pt';
+      const fullName = waitlistName ? waitlistName.value.trim() : '';
+      const payload = {
+        email,
+        fullName: fullName || null,
+        language: WAITLIST_LANGUAGE_CODES[lang] ?? 0,
+      };
+
+      const originalLabel = waitlistBtnText ? waitlistBtnText.textContent : waitlistBtn.textContent;
+      waitlistBtn.disabled = true;
+      if (waitlistBtnText) waitlistBtnText.textContent = '...';
+      else waitlistBtn.textContent = '...';
+
+      try {
+        const response = await fetch(`${WAITLIST_API_BASE_URL}/api/marketing/contacts`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const body = await readWaitlistResponse(response);
+
+        if (!response.ok) {
+          const detail = body.message || `A API respondeu com o status ${response.status}.`;
+          throw new Error(detail);
         }
-      });
-    });
 
-    // Pausa a rotação quando o mouse está sobre o carousel
-    const mockupCarousel = document.querySelector('.mockup-carousel');
-    const carouselControls = document.querySelector('.carousel-controls');
-    
-    // if (mockupCarousel) {
-    //   mockupCarousel.addEventListener('mouseenter', stopAutoRotate);
-    //   mockupCarousel.addEventListener('mouseleave', startAutoRotate);
-    // }
-    
-    // if (carouselControls) {
-    //   carouselControls.addEventListener('mouseenter', stopAutoRotate);
-    //   carouselControls.addEventListener('mouseleave', startAutoRotate);
-    // }
-
-    // Suporte a navegação por teclado (acessibilidade)
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft') {
-        prevMockup();
-        stopAutoRotate();
-        startAutoRotate();
-      } else if (e.key === 'ArrowRight') {
-        nextMockup();
-        stopAutoRotate();
-        startAutoRotate();
+        waitlistForm.style.display = 'none';
+        waitlistSuccess.style.display = 'flex';
+      } catch (error) {
+        const offlineHint = error instanceof TypeError
+          ? 'Não foi possível enviar sua inscrição agora. Tente novamente em instantes.'
+          : error.message;
+        if (waitlistErrorText) waitlistErrorText.textContent = offlineHint;
+        if (waitlistError) waitlistError.style.display = 'flex';
+      } finally {
+        waitlistBtn.disabled = false;
+        if (waitlistBtnText) waitlistBtnText.textContent = originalLabel;
+        else waitlistBtn.textContent = originalLabel;
       }
+    };
+
+    waitlistBtn.addEventListener('click', submitWaitlist);
+    waitlistEmail.addEventListener('keydown', e => {
+      if (e.key === 'Enter') submitWaitlist();
     });
-  }
-  
-});
-/* ============================================================
-    6. CARROSSEL DE MÍDIA
-============================================================ */
-(function() {
-  const track = document.querySelector('.media-carousel-track');
-  const prevBtn = document.querySelector('.media-prev-btn');
-  const nextBtn = document.querySelector('.media-next-btn');
-  const dotsContainer = document.querySelector('.media-carousel-dots');
-
-  if (!track) return;
-
-  const cards = Array.from(track.querySelectorAll('.media-card'));
-  let currentIndex = 0;
-
-  function getVisible() {
-    if (window.innerWidth <= 580) return 1;
-    if (window.innerWidth <= 900) return 2;
-    return 3;
-  }
-
-  function maxIndex() {
-    return Math.max(0, cards.length - getVisible());
-  }
-
-  function getCardWidth() {
-    const gap = window.innerWidth <= 580 ? 16 : 24;
-    return cards[0].offsetWidth + gap;
-  }
-
-  function updateTrack() {
-    const offset = currentIndex * getCardWidth();
-    track.style.transform = `translateX(-${offset}px)`;
-    updateDots();
-    updateButtons();
-  }
-
-  function updateButtons() {
-    if (prevBtn) prevBtn.disabled = currentIndex === 0;
-    if (nextBtn) nextBtn.disabled = currentIndex >= maxIndex();
-  }
-
-  function buildDots() {
-    dotsContainer.innerHTML = '';
-    const total = maxIndex() + 1;
-    for (let i = 0; i < total; i++) {
-      const dot = document.createElement('button');
-      dot.className = 'media-dot' + (i === 0 ? ' active' : '');
-      dot.setAttribute('aria-label', `Ir para item ${i + 1}`);
-      dot.addEventListener('click', () => { currentIndex = i; updateTrack(); });
-      dotsContainer.comendChild(dot);
+    if (waitlistName) {
+      waitlistName.addEventListener('keydown', e => {
+        if (e.key === 'Enter') submitWaitlist();
+      });
     }
   }
 
-  function updateDots() {
-    const dots = dotsContainer.querySelectorAll('.media-dot');
-    dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
-  }
+});
 
-  if (prevBtn) prevBtn.addEventListener('click', () => {
-    if (currentIndex > 0) { currentIndex--; updateTrack(); }
-  });
+/* Exposta globalmente para ser chamada em applyLanguage() */
+function updateHeroTitle(lang) {
+  const suffix = document.getElementById('hero-suffix');
+  if (!suffix) return;
 
-  if (nextBtn) nextBtn.addEventListener('click', () => {
-    if (currentIndex < maxIndex()) { currentIndex++; updateTrack(); }
-  });
+  const suffixes = {
+    pt: ' e se<br /><span class="highlight">divertir</span> — tudo em um <br>aplicativo seguro!',
+    en: ' and<br /><span class="highlight">have fun</span> — all in one<br>safe app!',
+    es: ' y<br /><span class="highlight">divertirse</span> — todo en una<br>aplicación segura!'
+  };
 
-  // Recalcula ao redimensionar
-  let resizeTimer;
-  window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-      currentIndex = Math.min(currentIndex, maxIndex());
-      buildDots();
-      updateTrack();
-    }, 150);
-  });
-
-  buildDots();
-  updateTrack();
-})();
+  suffix.innerHTML = suffixes[lang] || suffixes.pt;
+}

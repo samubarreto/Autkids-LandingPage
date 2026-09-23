@@ -43,21 +43,22 @@ body {
   position: relative;
 }
 
-/* Botão Voltar */
 .back-btn {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  color: var(--text-dark);
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.95rem;
-  transition: color 0.3s ease;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	text-decoration: none;
+	font-weight: 700;
+	color: var(--text-dark);
+	padding: 10px 14px;
+	border-radius: 12px;
+	border: 2px solid #f0f0f0;
+	background: #fff;
+	transition: all 0.2s ease;
 }
 
 .back-btn:hover {
-  color: var(--primary-yellow);
+	border-color: var(--primary-yellow);
 }
 
 /* Trigger do idioma */
@@ -111,7 +112,7 @@ body {
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.3s ease;
-  min-width: 280px;
+  min-width: 360px;
   z-index: 1001;
 }
 
@@ -160,6 +161,10 @@ body {
   border-radius: 4px;
   object-fit: cover;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.language-option span {
+  white-space: nowrap;
 }
 
 /* ========================================
@@ -365,7 +370,8 @@ p a {
   }
 
   .language-dropdown {
-    min-width: 240px;
-    max-width: calc(100vw - 40px);
+    min-width: 300px;
+    max-width: calc(100vw - 24px);
+    right: 0;
   }
 }
