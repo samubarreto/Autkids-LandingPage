@@ -579,7 +579,7 @@ section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
 }
 .waitlist-image img { width: 100%; max-width: 360px; height: auto; object-fit: contain; }
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   .waitlist-card { flex-direction: column; padding: 32px; }
   .waitlist-content { flex: 0 1 auto; width: 100%; }
   .waitlist-image { width: 100%; min-height: 160px; order: -1; margin-bottom: 24px; }
