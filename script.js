@@ -294,13 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const waitlistForm = document.getElementById('waitlistForm');
   const waitlistSuccess = document.getElementById('waitlistSuccess');
   const waitlistError = document.getElementById('waitlistError');
-  const waitlistErrorText = document.getElementById('waitlistErrorText');
-
-  async function readWaitlistResponse(response) {
-    const contentType = response.headers.get('content-type') || '';
-    if (contentType.includes('application/json')) return response.json();
-    return { message: await response.text() };
-  }
+  const waitlistRetry = document.getElementById('waitlistRetry');
 
   if (waitlistBtn && waitlistEmail) {
     const submitWaitlist = async () => {
@@ -335,21 +329,15 @@ document.addEventListener('DOMContentLoaded', () => {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload),
         });
-        const body = await readWaitlistResponse(response);
-
         if (!response.ok) {
-          const detail = body.message || `A API respondeu com o status ${response.status}.`;
-          throw new Error(detail);
+          if (waitlistError) waitlistError.style.display = 'flex';
+          return;
         }
 
         waitlistForm.style.display = 'none';
         if (waitlistDesc) waitlistDesc.hidden = true;
         waitlistSuccess.style.display = 'flex';
-      } catch (error) {
-        const offlineHint = error instanceof TypeError
-          ? 'Não foi possível enviar sua inscrição agora. Tente novamente em instantes.'
-          : error.message;
-        if (waitlistErrorText) waitlistErrorText.textContent = offlineHint;
+      } catch {
         if (waitlistError) waitlistError.style.display = 'flex';
       } finally {
         waitlistBtn.disabled = false;
@@ -359,6 +347,16 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     waitlistBtn.addEventListener('click', submitWaitlist);
+    if (waitlistRetry) {
+      waitlistRetry.addEventListener('click', () => {
+        if (waitlistName) waitlistName.value = '';
+        waitlistEmail.value = '';
+        waitlistEmail.style.borderColor = '';
+        if (waitlistError) waitlistError.style.display = 'none';
+        if (waitlistForm) waitlistForm.style.display = '';
+        waitlistEmail.focus();
+      });
+    }
     waitlistEmail.addEventListener('keydown', e => {
       if (e.key === 'Enter') submitWaitlist();
     });

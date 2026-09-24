@@ -42,7 +42,9 @@ const translations = {
     'waitlist_name_placeholder': 'Seu nome',
     'waitlist_placeholder': 'seu@email.com',
     'waitlist_btn': 'Quero receber novidades',
-    'waitlist_success': 'Quase lá! Enviamos um e-mail para você. Clique no botão de confirmação para garantir que vamos te avisar das novidades 💛',
+    'waitlist_success': 'Quase lá! Confirme pelo e-mail que enviamos para receber as novidades 💛',
+    'waitlist_error': 'Não foi possível enviar sua inscrição agora. Tente novamente em instantes.',
+    'waitlist_retry': 'Reiniciar formulário',
     'waitlist_trust': 'Só enviaremos avisos sobre o app. Sem spam.',
 
     'footer_help': 'Central de Ajuda',
@@ -88,7 +90,9 @@ const translations = {
     'waitlist_name_placeholder': 'Your name',
     'waitlist_placeholder': 'your@email.com',
     'waitlist_btn': 'Get email updates',
-    'waitlist_success': "Almost there! We sent you an email. Click the confirmation button to make sure we can keep you updated 💛",
+    'waitlist_success': 'Almost there! Confirm through the email we sent you to receive updates 💛',
+    'waitlist_error': 'We couldn\'t send your signup right now. Please try again in a few moments.',
+    'waitlist_retry': 'Reset the form',
     'waitlist_trust': 'Only app launch and news emails. No spam.',
 
     'footer_help': 'Help Center',
@@ -134,7 +138,9 @@ const translations = {
     'waitlist_name_placeholder': 'Tu nombre',
     'waitlist_placeholder': 'tu@correo.com',
     'waitlist_btn': 'Quiero recibir novedades',
-    'waitlist_success': '¡Ya casi! Te enviamos un correo. Haz clic en el botón de confirmación para asegurarte de que podamos avisarte de las novedades 💛',
+    'waitlist_success': '¡Ya casi! Confirma desde el correo que te enviamos para recibir novedades 💛',
+    'waitlist_error': 'No pudimos enviar tu inscripción ahora. Inténtalo de nuevo en unos instantes.',
+    'waitlist_retry': 'Reiniciar el formulario',
     'waitlist_trust': 'Solo enviaremos avisos sobre la app. Sin spam.',
 
     'footer_help': 'Centro de Ayuda',
@@ -204,6 +210,12 @@ function changeLanguage(lang) {
     } else {
       el.textContent = value;
     }
+  });
+
+  document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
+    const key = el.getAttribute('data-i18n-aria-label');
+    const value = translations[lang]?.[key];
+    if (value) el.setAttribute('aria-label', value);
   });
 
   const waitlistNameInput = document.getElementById('waitlistName');
