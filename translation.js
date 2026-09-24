@@ -42,7 +42,7 @@ const translations = {
     'waitlist_name_placeholder': 'Seu nome',
     'waitlist_placeholder': 'seu@email.com',
     'waitlist_btn': 'Quero receber novidades',
-    'waitlist_success': 'Combinado! Avisaremos quando o app ficar pronto ou tivermos novidades 💛',
+    'waitlist_success': 'Quase lá! Enviamos um e-mail para você. Clique no botão de confirmação para garantir que vamos te avisar das novidades 💛',
     'waitlist_trust': 'Só enviaremos avisos sobre o app. Sem spam.',
 
     'footer_help': 'Central de Ajuda',
@@ -88,7 +88,7 @@ const translations = {
     'waitlist_name_placeholder': 'Your name',
     'waitlist_placeholder': 'your@email.com',
     'waitlist_btn': 'Get email updates',
-    'waitlist_success': "Thanks! We'll email you when the app is ready or we have news 💛",
+    'waitlist_success': "Almost there! We sent you an email. Click the confirmation button to make sure we can keep you updated 💛",
     'waitlist_trust': 'Only app launch and news emails. No spam.',
 
     'footer_help': 'Help Center',
@@ -134,7 +134,7 @@ const translations = {
     'waitlist_name_placeholder': 'Tu nombre',
     'waitlist_placeholder': 'tu@correo.com',
     'waitlist_btn': 'Quiero recibir novedades',
-    'waitlist_success': '¡Listo! Te avisaremos cuando la app esté lista o tengamos novedades 💛',
+    'waitlist_success': '¡Ya casi! Te enviamos un correo. Haz clic en el botón de confirmación para asegurarte de que podamos avisarte de las novedades 💛',
     'waitlist_trust': 'Solo enviaremos avisos sobre la app. Sin spam.',
 
     'footer_help': 'Centro de Ayuda',
