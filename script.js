@@ -290,6 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const waitlistBtnText = waitlistBtn ? waitlistBtn.querySelector('.waitlist-btn-text') : null;
   const waitlistName = document.getElementById('waitlistName');
   const waitlistEmail = document.getElementById('waitlistEmail');
+  const waitlistTitle = document.getElementById('waitlistTitle');
   const waitlistDesc = document.getElementById('waitlistDesc');
   const waitlistForm = document.getElementById('waitlistForm');
   const waitlistSuccess = document.getElementById('waitlistSuccess');
@@ -336,6 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         waitlistForm.style.display = 'none';
         if (waitlistDesc) waitlistDesc.hidden = true;
+        if (waitlistTitle) waitlistTitle.hidden = true;
         waitlistSuccess.style.display = 'flex';
       } catch {
         if (waitlistError) waitlistError.style.display = 'flex';

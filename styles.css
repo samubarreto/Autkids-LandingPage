@@ -1246,6 +1246,7 @@ section {
 
 .waitlist-success-icon {
   flex: 0 0 36px;
+  padding: 8px;
   width: 36px;
   height: 36px;
   background-color: #fff;
