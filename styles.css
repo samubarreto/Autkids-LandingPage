@@ -1268,6 +1268,31 @@ section {
   margin-top: 14px;
 }
 
+.waitlist-retry-btn {
+  display: inline-flex;
+  flex: 0 0 36px;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-left: auto;
+  padding: 0;
+  border: 1px solid #e4b9b0;
+  border-radius: 50%;
+  background: #fff;
+  color: #984334;
+  cursor: pointer;
+}
+
+.waitlist-retry-btn:hover {
+  background: #fff8f6;
+}
+
+.waitlist-retry-btn:focus-visible {
+  outline: 3px solid rgba(152, 67, 52, 0.35);
+  outline-offset: 2px;
+}
+
 .waitlist-content .waitlist-trust {
   font-size: 0.8rem;
   color: #9a9184;
