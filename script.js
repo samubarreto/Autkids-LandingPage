@@ -290,6 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const waitlistBtnText = waitlistBtn ? waitlistBtn.querySelector('.waitlist-btn-text') : null;
   const waitlistName = document.getElementById('waitlistName');
   const waitlistEmail = document.getElementById('waitlistEmail');
+  const waitlistDesc = document.getElementById('waitlistDesc');
   const waitlistForm = document.getElementById('waitlistForm');
   const waitlistSuccess = document.getElementById('waitlistSuccess');
   const waitlistError = document.getElementById('waitlistError');
@@ -342,6 +343,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         waitlistForm.style.display = 'none';
+        if (waitlistDesc) waitlistDesc.hidden = true;
         waitlistSuccess.style.display = 'flex';
       } catch (error) {
         const offlineHint = error instanceof TypeError
