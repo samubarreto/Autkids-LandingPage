@@ -254,7 +254,7 @@ a:focus {
   gap: 10px;
 }
 
-.mobile-menu-social > span {
+.mobile-menu-social>span {
   color: #555;
   font-size: 0.85rem;
   font-weight: 500;
@@ -1215,7 +1215,7 @@ section {
 .waitlist-success {
   display: none;
   align-items: center;
-  gap: 8px;
+  gap: 16px;
   color: #1b5e20;
   font-weight: 600;
   font-size: 0.88rem;
@@ -1225,6 +1225,31 @@ section {
   border-radius: 12px;
   max-width: 480px;
   margin-top: 14px;
+}
+
+.waitlist-success,
+.waitlist-error {
+  animation: waitlist-message-in 280ms ease-out both;
+}
+
+@keyframes waitlist-message-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.waitlist-success-icon {
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  background-color: #fff;
+  border-radius: 50%;
 }
 
 .waitlist-error {
@@ -1954,7 +1979,9 @@ section {
 @media (prefers-reduced-motion: reduce) {
 
   .yt-a-play-btn,
-  #tw-word {
+  #tw-word,
+  .waitlist-success,
+  .waitlist-error {
     animation: none !important;
   }
 }
