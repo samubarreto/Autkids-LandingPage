@@ -776,6 +776,26 @@ section {
   overflow: hidden;
 }
 
+/* #waitlist {
+  scroll-margin-top: -1000vh;
+} */
+
+.pricing-right {
+  overflow: hidden;
+
+  -webkit-mask-image: linear-gradient(to right,
+      transparent 0%,
+      black 10%,
+      black 90%,
+      transparent 100%);
+
+  mask-image: linear-gradient(to right,
+      transparent 0%,
+      black 10%,
+      black 90%,
+      transparent 100%);
+}
+
 .mockup-carousel {
   position: relative;
   width: 100%;
@@ -1299,6 +1319,7 @@ section {
   color: #9a9184;
   font-weight: 500;
   margin-top: 32px;
+  text-align: center;
 }
 
 .waitlist-trust svg {

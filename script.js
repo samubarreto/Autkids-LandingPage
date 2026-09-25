@@ -384,3 +384,14 @@ function updateHeroTitle(lang) {
 
   suffix.innerHTML = suffixes[lang] || suffixes.pt;
 }
+
+document.querySelectorAll('a[href="#waitlist"]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    document.querySelector('#waitlist').scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    });
+  });
+});
