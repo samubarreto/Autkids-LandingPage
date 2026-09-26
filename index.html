@@ -175,7 +175,9 @@
         </svg>
       </button>
 
-      <img src="assets/Lp_inicial/adaptive-icon.png" alt="Icon Autkids" class="top-icon" />
+      <button type="button" class="top-logo-button" aria-label="Voltar ao topo">
+        <img src="assets/Lp_inicial/adaptive-icon.png" alt="Autkids" class="top-icon" />
+      </button>
 
       <div class="header-actions">
         <!-- Botões visíveis só no desktop -->
@@ -288,7 +290,8 @@
       <h2 class="section-title" data-i18n="section_why" data-aos="fade-up" data-aos-duration="700"></h2>
       <div class="features">
         <article class="feature" data-aos="fade-right" data-aos-duration="700" data-aos-delay="0">
-          <div class="icon"><img src="assets/Lp_inicial/ilustracao2.png" alt="Icone Personalizável"></div>
+          <div class="icon"><img src="assets/Lp_inicial/ilustracao2.png" class="feature-illustration"
+              alt="Icone Personalizável"></div>
           <div class="feature-content">
             <h3 data-i18n="feature_1_title"></h3>
             <p data-i18n="feature_1_desc"></p>
@@ -302,7 +305,8 @@
           </div>
         </article>
         <article class="feature" data-aos="fade-right" data-aos-duration="700" data-aos-delay="100">
-          <div class="icon"><img src="assets/Lp_inicial/ilustração.png" alt="Icone Comunicação"></div>
+          <div class="icon"><img src="assets/Lp_inicial/ilustração.png" class="feature-illustration"
+              alt="Icone Comunicação"></div>
           <div class="feature-content">
             <h3 data-i18n="feature_3_title"></h3>
             <p data-i18n="feature_3_desc"></p>
@@ -557,6 +561,12 @@
   <script src="translation.js"></script>
   <script src="script.js"></script>
 
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Voltar ao topo">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 19V5M5 12l7-7 7 7" />
+    </svg>
+  </button>
 
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
