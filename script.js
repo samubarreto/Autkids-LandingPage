@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  const scrollToPageTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.getElementById('backToTop')?.addEventListener('click', scrollToPageTop);
+  document.querySelector('.top-logo-button')?.addEventListener('click', scrollToPageTop);
+
   /* ============================================================
       1. INICIALIZAR IDIOMA
   ============================================================ */

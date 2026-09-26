@@ -108,6 +108,54 @@ a:focus {
   display: block;
 }
 
+.top-logo-button {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.top-logo-button:hover {
+  transform: scale(1.04);
+}
+
+.back-to-top {
+  display: none;
+  position: fixed;
+  right: 16px;
+  bottom: calc(84px + env(safe-area-inset-bottom, 0px));
+  z-index: 998;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: var(--primary-yellow);
+  color: var(--text-dark);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+}
+
+.back-to-top:hover {
+  transform: translateY(-2px);
+}
+
+.back-to-top:focus-visible {
+  outline: 3px solid var(--text-dark);
+  outline-offset: 3px;
+}
+
 /* ── Hamburguer - LADO ESQUERDO, só mobile ── */
 .hamburger-btn {
   display: none;
@@ -655,6 +703,12 @@ section {
   margin: 0 auto;
 }
 
+.feature .icon img.feature-illustration {
+  width: 110px;
+  max-width: 100%;
+  max-height: 96px;
+}
+
 .feature h3 {
   font-size: 1.1rem;
   font-weight: 700;
@@ -1132,7 +1186,7 @@ section {
 .waitlist-content {
   flex: 0 1 480px;
   min-width: 0;
-  text-align: left;
+  text-align: center;
 }
 
 .waitlist-content h2 {
@@ -1521,6 +1575,11 @@ section {
     padding: 0;
   }
 
+  .pricing-right {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
   .hero-right,
   .pricing-right {
     order: -1;
@@ -1672,9 +1731,22 @@ section {
     right: 0;
   }
 
-  /* Esconde o ícone pequeno do header no mobile - a logo já aparece no hero */
-  .top-flags .top-icon {
+  /* Esconde a logo do header no mobile - a logo já aparece no hero */
+  .top-logo-button {
     display: none;
+  }
+
+  .back-to-top {
+    display: flex;
+    right: 10px;
+    bottom: 75px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    color: #fff;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
 
   /* Header mais alto no mobile */
@@ -1886,6 +1958,11 @@ section {
   .feature .icon {
     width: 140px;
     height: 96px;
+  }
+
+  .feature .icon img.feature-illustration {
+    width: 82px;
+    max-height: 76px;
   }
 
   .pricing {
