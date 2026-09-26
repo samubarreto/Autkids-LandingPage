@@ -1560,6 +1560,26 @@ section {
     gap: 32px;
   }
 
+  .hero-left,
+  .pricing-left {
+    text-align: center;
+  }
+
+  .lead,
+  .pricing-left p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tw-wrap {
+    justify-content: center;
+  }
+
+  .coming-soon-badge {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .hero {
     padding: 48px 20px;
     background: linear-gradient(180deg, #FFC300 0%, #FFC300 200px, #FFE082 450px, #FFE082 100%);
