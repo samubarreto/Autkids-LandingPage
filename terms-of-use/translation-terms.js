@@ -62,6 +62,18 @@ const translations = {
     sec_10_title: "10. Alterações nos Termos",
     sec_10_text: "Reservamo-nos o direito de <strong>atualizar estes termos periodicamente</strong>. O uso continuado do app após alterações constitui aceitação dos novos termos.",
 
+    nav_download: 'Novidades',
+
+    footer_help: 'Central de Ajuda',
+
+    footer_about: 'Sobre Nós',
+
+    footer_terms: 'Termos de Uso',
+
+    footer_privacy: 'Política de Privacidade',
+
+    footer_social: 'Entre em contato conosco:',
+
     footer_rights: `© ${currentYear} Autkids | CNPJ: 65.388.377/0001-05. Todos os direitos reservados`
   },
 
@@ -126,6 +138,18 @@ const translations = {
     sec_10_title: "10. Changes to the Terms",
     sec_10_text: "We reserve the right to <strong>update these terms periodically</strong>. Continued use of the app after changes constitutes acceptance of the new terms.",
 
+    nav_download: 'Updates',
+
+    footer_help: 'Help Center',
+
+    footer_about: 'About Us',
+
+    footer_terms: 'Terms of Use',
+
+    footer_privacy: 'Privacy Policy',
+
+    footer_social: 'Contact Us:',
+
     footer_rights: `© ${currentYear} Autkids | CNPJ: 65.388.377/0001-05. All rights reserved`
   },
 
@@ -189,6 +213,18 @@ const translations = {
 
     sec_10_title: "10. Cambios en los Términos",
     sec_10_text: "Nos reservamos el derecho de <strong>actualizar estos términos periódicamente</strong>. El uso continuado de la app tras los cambios constituye la aceptación de los nuevos términos.",
+
+    nav_download: 'Novedades',
+
+    footer_help: 'Centro de Ayuda',
+
+    footer_about: 'Sobre Nosotros',
+
+    footer_terms: 'Términos de Uso',
+
+    footer_privacy: 'Política de Privacidad',
+
+    footer_social: 'Contáctanos:',
 
     footer_rights: `© ${currentYear} Autkids | CNPJ: 65.388.377/0001-05. Todos los derechos reservados`
   }

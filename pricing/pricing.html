@@ -50,7 +50,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles-pricing.css" />
-  <link rel="stylesheet" href="../language-selector-mobile.css" />
+  <link rel="stylesheet" href="../components/components.css" />
 </head>
 
 <body>
@@ -58,39 +58,8 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGWB62WX" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-
-  <!-- HEADER -->
-  <header class="top-flags">
-    <div class="language-selector">
-      <a href="../index.html" class="back-btn">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M19 12H5M12 19l-7-7 7-7" />
-        </svg>
-        <span data-i18n="btn_back"></span>
-      </a>
-      <div class="language-wrapper">
-        <button class="language-trigger" id="langTrigger">
-          <img id="currentFlag" src="../assets/bandeiras/brasil.png" alt="Idioma atual">
-          <span id="currentLang"></span>
-          <svg class="chevron" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-            <path d="M4.5 6L8 9.5L11.5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" fill="none" />
-          </svg>
-        </button>
-        <div class="language-dropdown" id="langDropdown">
-          <div class="language-grid">
-            <button class="language-option" data-lang="pt"><img src="../assets/bandeiras/brasil.png"
-                alt="Brasil"><span></span></button>
-            <button class="language-option" data-lang="en"><img src="../assets/bandeiras/eua.png"
-                alt="EUA"><span></span></button>
-            <button class="language-option" data-lang="es"><img src="../assets/bandeiras/espanha.png"
-                alt="Espanha"><span></span></button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+  <mobile-header data-root="../"></mobile-header>
+  <desktop-header data-root="../"></desktop-header>
 
   <!-- HERO -->
   <section class="hero">
@@ -460,10 +429,10 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer-mini">
-    <span data-i18n="footer_rights"></span>
-  </footer>
+  <mobile-footer data-root="../"></mobile-footer>
+  <desktop-footer data-root="../"></desktop-footer>
 
+  <script src="../components/components.js"></script>
   <script src="translation-pricing.js"></script>
   <script src="pricing.js"></script>
 

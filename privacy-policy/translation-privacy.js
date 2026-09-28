@@ -78,6 +78,18 @@ const translations = {
     sec_9_li1: "<strong>E-mail:</strong> <a href='mailto:privacidade@autkids.app'>privacidade@autkids.app</a>",
     sec_9_li2: "<strong>Endereço:</strong> Avenida Doutor Hercules Galletti, 260, Bloco 29, AP103 - Marília/SP",
 
+    nav_download: 'Novidades',
+
+    footer_help: 'Central de Ajuda',
+
+    footer_about: 'Sobre Nós',
+
+    footer_terms: 'Termos de Uso',
+
+    footer_privacy: 'Política de Privacidade',
+
+    footer_social: 'Entre em contato conosco:',
+
     footer_rights: `© ${currentYear} Autkids | CNPJ: 65.388.377/0001-05. Todos os direitos reservados`
   },
 
@@ -158,6 +170,18 @@ const translations = {
     sec_9_li1: "<strong>Email:</strong> <a href='mailto:privacidade@autkids.app'>privacidade@autkids.app</a>",
     sec_9_li2: "<strong>Address:</strong> Avenida Doutor Hercules Galletti, 260, Bloco 29, AP103 - Marília/SP, Brazil",
 
+    nav_download: 'Updates',
+
+    footer_help: 'Help Center',
+
+    footer_about: 'About Us',
+
+    footer_terms: 'Terms of Use',
+
+    footer_privacy: 'Privacy Policy',
+
+    footer_social: 'Contact Us:',
+
     footer_rights: `© ${currentYear} Autkids | CNPJ: 65.388.377/0001-05. All rights reserved`
   },
 
@@ -237,6 +261,18 @@ const translations = {
     sec_9_text: "Si tiene preguntas sobre la aplicación, cómo tratamos las fotos, audios o datos de salud de su hijo, póngase en contacto con nuestro Responsable de Protección de Datos (DPO):",
     sec_9_li1: "<strong>Correo:</strong> <a href='mailto:privacidade@autkids.app'>privacidade@autkids.app</a>",
     sec_9_li2: "<strong>Dirección:</strong> Avenida Doutor Hercules Galletti, 260, Bloco 29, AP103 - Marília/SP, Brasil",
+
+    nav_download: 'Novedades',
+
+    footer_help: 'Centro de Ayuda',
+
+    footer_about: 'Sobre Nosotros',
+
+    footer_terms: 'Términos de Uso',
+
+    footer_privacy: 'Política de Privacidad',
+
+    footer_social: 'Contáctanos:',
 
     footer_rights: `© ${currentYear} Autkids | CNPJ: 65.388.377/0001-05. Todos los derechos reservados`
   }

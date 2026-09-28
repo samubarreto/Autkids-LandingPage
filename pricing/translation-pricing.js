@@ -135,6 +135,18 @@ const pricingTranslations = {
     faq_q4: 'O plano Profissional funciona para clínicas pequenas?',
     faq_a4: 'Sim! O plano é sob medida para instituições, clínicas, escolas e profissionais da área, com recursos dedicados por colaborador. Entre em contato para saber mais sobre condições especiais.',
 
+    nav_download: 'Novidades',
+
+    footer_help: 'Central de Ajuda',
+
+    footer_about: 'Sobre Nós',
+
+    footer_terms: 'Termos de Uso',
+
+    footer_privacy: 'Política de Privacidade',
+
+    footer_social: 'Entre em contato conosco:',
+
     footer_rights: `© ${currentYear} Autkids | CNPJ: 65.388.377/0001-05. Todos os direitos reservados`,
   },
 
@@ -258,6 +270,18 @@ const pricingTranslations = {
     faq_q4: 'Does the Professional plan work for small clinics?',
     faq_a4: 'Yes! The plan is tailor-made for institutions, clinics, schools, and professionals, with dedicated resources per staff member. Contact us for more about special conditions.',
 
+    nav_download: 'Updates',
+
+    footer_help: 'Help Center',
+
+    footer_about: 'About Us',
+
+    footer_terms: 'Terms of Use',
+
+    footer_privacy: 'Privacy Policy',
+
+    footer_social: 'Contact Us:',
+
     footer_rights: `© ${currentYear} Autkids | CNPJ: 65.388.377/0001-05. All rights reserved`,
   },
 
@@ -380,6 +404,18 @@ const pricingTranslations = {
     faq_a3: 'Claro! Puedes hacer upgrade o downgrade en cualquier momento, sin complicaciones.',
     faq_q4: '¿El plan Profesional funciona para clínicas pequeñas?',
     faq_a4: '¡Sí! El plan es a medida para instituciones, clínicas, escuelas y profesionales del área, con recursos dedicados por colaborador. Contáctanos para saber más sobre condiciones especiales.',
+
+    nav_download: 'Novedades',
+
+    footer_help: 'Centro de Ayuda',
+
+    footer_about: 'Sobre Nosotros',
+
+    footer_terms: 'Términos de Uso',
+
+    footer_privacy: 'Política de Privacidad',
+
+    footer_social: 'Contáctanos:',
 
     footer_rights: `© ${currentYear} Autkids | CNPJ: 65.388.377/0001-05. Todos los derechos reservados`,
   },
