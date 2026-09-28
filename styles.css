@@ -151,6 +151,12 @@ a:focus {
   transform: translateY(-2px);
 }
 
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
 .back-to-top:focus-visible {
   outline: 3px solid var(--text-dark);
   outline-offset: 3px;
@@ -324,6 +330,7 @@ a:focus {
   height: 36px;
   border-radius: 8px;
   background: #fff9e4;
+  color: #7a5200;
 }
 
 .mobile-menu-social-links a:hover {
@@ -1526,7 +1533,7 @@ section {
 
 .copyright-bar {
   background-color: var(--bg-soft-footer);
-  padding: 12px 20px;
+  padding: 8px 0px;
   text-align: center;
   color: var(--footer-yellow);
   font-weight: 600;
@@ -1764,9 +1771,7 @@ section {
     height: 40px;
     border-radius: 8px;
     color: #fff;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   }
 
   /* Header mais alto no mobile */
@@ -1956,7 +1961,7 @@ section {
 
   .copyright-bar {
     font-size: 13px;
-    padding: 10px 16px;
+    padding: 8px 0px;
   }
 }
 
@@ -2119,13 +2124,4 @@ section {
   background: rgba(0, 0, 0, 0.9);
 }
 
-/* Acessibilidade */
-@media (prefers-reduced-motion: reduce) {
-
-  .yt-a-play-btn,
-  #tw-word,
-  .waitlist-success,
-  .waitlist-error {
-    animation: none !important;
-  }
-}
+\n

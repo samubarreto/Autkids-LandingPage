@@ -1,81 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   const scrollToPageTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
-  document.getElementById('backToTop')?.addEventListener('click', scrollToPageTop);
-  document.querySelector('.top-logo-button')?.addEventListener('click', scrollToPageTop);
+  const backToTop = document.getElementById('backToTop');
+  backToTop?.addEventListener('click', scrollToPageTop);
+  if (backToTop) {
+    const updateBackToTopVisibility = () => {
+      backToTop.classList.toggle('is-visible', window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', updateBackToTopVisibility, { passive: true });
+    updateBackToTopVisibility();
+  }
+  document.querySelectorAll('.top-logo-button').forEach(button => {
+    button.addEventListener('click', scrollToPageTop);
+  });
 
   /* ============================================================
       1. INICIALIZAR IDIOMA
   ============================================================ */
   const savedLang = localStorage.getItem('autkids-language') || 'pt';
   document.documentElement.lang = savedLang;
-  if (typeof changeLanguage === 'function') {
-    changeLanguage(savedLang);
-  }
   updateHeroTitle(savedLang);
-
-  /* ============================================================
-      2. SELETOR DE IDIOMAS
-  ============================================================ */
-  const langTrigger = document.getElementById('langTrigger');
-  const langDropdown = document.getElementById('langDropdown');
-  const currentFlag = document.getElementById('currentFlag');
-  const currentLang = document.getElementById('currentLang');
-  const languageOptions = document.querySelectorAll('.language-option');
-
-  if (langTrigger && langDropdown) {
-
-    const languages = {
-      pt: { name: 'Português', flag: 'assets/bandeiras/brasil.png' },
-      en: { name: 'English', flag: 'assets/bandeiras/eua.png' },
-      es: { name: 'Español', flag: 'assets/bandeiras/espanha.png' }
-    };
-
-    const languageLabels = {
-      pt: { pt: 'Português', en: 'Inglês', es: 'Espanhol' },
-      en: { pt: 'Portuguese', en: 'English', es: 'Spanish' },
-      es: { pt: 'Portugués', en: 'Inglés', es: 'Español' }
-    };
-
-    function applyLanguage(lang) {
-      if (!languages[lang]) return;
-      currentFlag.src = languages[lang].flag;
-      currentLang.textContent = languageLabels[lang][lang];
-      languageOptions.forEach(opt => {
-        const optionLang = opt.dataset.lang;
-        const labelEl = opt.querySelector('span');
-        if (labelEl) labelEl.textContent = languageLabels[lang][optionLang] || opt.dataset.name;
-        opt.classList.toggle('active', opt.dataset.lang === lang);
-      });
-      document.documentElement.lang = lang;
-      if (typeof changeLanguage === 'function') changeLanguage(lang);
-      updateHeroTitle(lang);
-      if (typeof window.twRestart === 'function') window.twRestart(lang);
-    }
-
-    applyLanguage(savedLang);
-
-    langTrigger.addEventListener('click', e => {
-      e.stopPropagation();
-      langTrigger.classList.toggle('active');
-      langDropdown.classList.toggle('active');
-    });
-
-    document.addEventListener('click', e => {
-      if (!e.target.closest('.language-selector')) {
-        langTrigger.classList.remove('active');
-        langDropdown.classList.remove('active');
-      }
-    });
-
-    languageOptions.forEach(option => {
-      option.addEventListener('click', () => {
-        applyLanguage(option.dataset.lang);
-        langTrigger.classList.remove('active');
-        langDropdown.classList.remove('active');
-      });
-    });
-  }
 
   /* ============================================================
       3. MENU HAMBURGUER (MOBILE)
@@ -90,12 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
       menuDrawer.classList.add('open');
       menuOverlay.classList.add('open');
       menuDrawer.setAttribute('aria-hidden', 'false');
+      hamburgerBtn.setAttribute('aria-expanded', 'true');
       document.body.style.overflow = 'hidden';
     }
     function closeMenu() {
       menuDrawer.classList.remove('open');
       menuOverlay.classList.remove('open');
       menuDrawer.setAttribute('aria-hidden', 'true');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
     }
     hamburgerBtn.addEventListener('click', openMenu);
@@ -183,8 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
       duration: 700,
       easing: 'ease-out',
       once: true,
-      offset: 80,
-      disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      offset: 80
     });
   }
 

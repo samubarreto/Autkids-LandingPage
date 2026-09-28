@@ -50,7 +50,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="language-selector-mobile.css" />
+  <link rel="stylesheet" href="components/components.css" />
 </head>
 
 <body>
@@ -59,169 +59,8 @@
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <div class="mobile-menu-overlay" id="menuOverlay"></div>
-
-  <div class="mobile-menu-drawer" id="menuDrawer" aria-hidden="true" role="dialog" aria-label="Menu de navegação">
-    <div class="mobile-menu-header">
-      <span>Autkids</span>
-      <button class="mobile-menu-close" id="menuClose" aria-label="Fechar menu">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2.2"
-          stroke-linecap="round" stroke-linejoin="round">
-          <line x1="18" y1="6" x2="6" y2="18" />
-          <line x1="6" y1="6" x2="18" y2="18" />
-        </svg>
-      </button>
-    </div>
-    <nav class="mobile-menu-nav">
-      <!-- Página de Planos ainda não publicada
-      <a href="pricing/pricing.html" class="menu-highlight" data-i18n="nav_pricing">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b8860b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        Planos
-      </a>
-      -->
-      <a href="faq/faq.html" data-i18n="footer_help">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2.2"
-          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="12" r="10" />
-          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
-          <line x1="12" y1="17" x2="12.01" y2="17" />
-        </svg>
-        Central de Ajuda
-      </a>
-      <!-- Página Sobre Nós ainda não publicada
-      <a href="about-us/about_us.html" data-i18n="footer_about">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-        Sobre Nós
-      </a>
-      -->
-      <a href="terms-of-use/terms.html" data-i18n="footer_terms">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2.2"
-          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-          <polyline points="14 2 14 8 20 8" />
-          <line x1="16" y1="13" x2="8" y2="13" />
-          <line x1="16" y1="17" x2="8" y2="17" />
-        </svg>
-        Termos de Uso
-      </a>
-      <a href="privacy-policy/privacy.html" data-i18n="footer_privacy">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2.2"
-          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-        </svg>
-        Política de Privacidade
-      </a>
-    </nav>
-    <div class="mobile-menu-footer">
-      <a href="#waitlist" class="mobile-menu-cta" id="mobileMenuCta">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M10.27 2.82A2 2 0 0 1 13.73 2.82" />
-          <path d="M18 8a6 6 0 0 0-12 0c0 4.5-2 6-2 6h16s-2-1.5-2-6" />
-          <path d="M9.5 17a2.5 2.5 0 0 0 5 0" />
-        </svg>
-        <span data-i18n="nav_download">Novidades</span>
-      </a>
-      <div class="mobile-menu-social">
-        <span data-i18n="footer_social"></span>
-        <div class="mobile-menu-social-links">
-          <a href="https://instagram.com/autkids_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFC107" aria-hidden="true">
-              <path
-                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-            </svg>
-          </a>
-          <a href="https://www.youtube.com/@Autkids01" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFC107" aria-hidden="true">
-              <path
-                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-            </svg>
-          </a>
-          <a href="https://www.linkedin.com/company/autkids/" target="_blank" rel="noopener noreferrer"
-            aria-label="LinkedIn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFC107" aria-hidden="true">
-              <path
-                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 .001-4.125 2.062 2.062 0 0 1-.001 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-            </svg>
-          </a>
-          <a href="mailto:suporte@autkids.com" aria-label="Email">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFC107" aria-hidden="true">
-              <path
-                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-            </svg>
-          </a>
-          <a href="https://www.tiktok.com/@autkids.oficial" target="_blank" rel="noopener noreferrer"
-            aria-label="TikTok">
-            <svg width="24" height="24" viewBox="0 0 16 16" fill="#FFC107" aria-hidden="true">
-              <path
-                d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <header class="top-flags">
-    <div class="language-selector">
-
-      <!-- ── Hamburguer: LADO ESQUERDO, só mobile ── -->
-      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Abrir menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-          stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="6" x2="21" y2="6" />
-          <line x1="3" y1="12" x2="21" y2="12" />
-          <line x1="3" y1="18" x2="21" y2="18" />
-        </svg>
-      </button>
-
-      <button type="button" class="top-logo-button" aria-label="Voltar ao topo">
-        <img src="assets/Lp_inicial/adaptive-icon.png" alt="Autkids" class="top-icon" />
-      </button>
-
-      <div class="header-actions">
-        <!-- Botões visíveis só no desktop -->
-        <!-- Página de Planos ainda não publicada
-        <a href="pricing/pricing.html" class="header-btn header-btn--outline">
-          <span data-i18n="nav_pricing">Planos</span>
-        </a>
-        -->
-        <a href="#waitlist" class="header-btn header-btn--download">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M10.27 2.82A2 2 0 0 1 13.73 2.82" />
-            <path d="M18 8a6 6 0 0 0-12 0c0 4.5-2 6-2 6h16s-2-1.5-2-6" />
-            <path d="M9.5 17a2.5 2.5 0 0 0 5 0" />
-          </svg>
-          <span data-i18n="nav_download">Novidades</span>
-        </a>
-
-        <div class="language-container-wrapper" style="position: relative;">
-          <button class="language-trigger" id="langTrigger">
-            <img id="currentFlag" src="assets/bandeiras/brasil.png" alt="Idioma atual">
-            <span id="currentLang"></span>
-            <svg class="chevron" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-              <path d="M4.5 6L8 9.5L11.5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" fill="none" />
-            </svg>
-          </button>
-          <div class="language-dropdown" id="langDropdown">
-            <div class="language-grid">
-              <button class="language-option" data-lang="pt" data-name="Português">
-                <img src="assets/bandeiras/brasil.png" alt="Brasil"><span>Português</span>
-              </button>
-              <button class="language-option" data-lang="en" data-name="English">
-                <img src="assets/bandeiras/eua.png" alt="Estados Unidos"><span>English</span>
-              </button>
-              <button class="language-option" data-lang="es" data-name="Español">
-                <img src="assets/bandeiras/espanha.png" alt="Espanha"><span>Español</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+  <mobile-header data-root="./" data-homepage></mobile-header>
+  <desktop-header data-root="./" data-homepage></desktop-header>
 
   <header class="hero">
     <div class="hero-inner">
@@ -482,64 +321,8 @@
 
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-top">
-      <div class="footer-inner">
-        <div class="brand" data-aos="fade-up" data-aos-duration="600">
-          <div class="logo"><img src="assets/Lp_inicial/LogoAutkids.png" alt="Logo Autkids"></div>
-        </div>
-        <nav class="footer-links" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-          <a href="faq/faq.html" data-i18n="footer_help">Central de Ajuda</a>
-          <!-- Página Sobre Nós ainda não publicada
-          <a href="about-us/about_us.html" data-i18n="footer_about">Sobre Nós</a>
-          -->
-          <a href="terms-of-use/terms.html" data-i18n="footer_terms">Termos de Uso</a>
-          <a href="privacy-policy/privacy.html" data-i18n="footer_privacy">Política de Privacidade</a>
-        </nav>
-        <div class="footer-right-group" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
-          <div class="social-group">
-            <span data-i18n="footer_social"></span>
-            <div class="social-links">
-              <a href="https://instagram.com/autkids_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFC107">
-                  <path
-                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                </svg>
-              </a>
-              <a href="https://www.youtube.com/@Autkids01" target="_blank" rel="noopener noreferrer"
-                aria-label="YouTube">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFC107">
-                  <path
-                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                </svg>
-              </a>
-              <a href="https://www.linkedin.com/company/autkids/" target="_blank" rel="noopener noreferrer"
-                aria-label="LinkedIn">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFC107">
-                  <path
-                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                </svg>
-              </a>
-              <a href="mailto:suporte@autkids.com" target="_blank" aria-label="Email">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFC107">
-                  <path
-                    d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                </svg>
-              </a>
-              <a href="https://www.tiktok.com/@autkids.oficial" target="_blank" rel="noopener noreferrer"
-                aria-label="TikTok">
-                <svg width="24" height="24" viewBox="0 0 16 16" fill="#FFC107">
-                  <path
-                    d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="copyright-bar" data-i18n="footer_rights"></div>
-  </footer>
+  <mobile-footer data-root="./"></mobile-footer>
+  <desktop-footer data-root="./"></desktop-footer>
 
   <!-- YouTube Modal -->
   <div class="yt-modal-overlay" id="ytModal" role="dialog" aria-modal="true" aria-label="Vídeo Autkids">
@@ -558,6 +341,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="components/components.js"></script>
   <script src="translation.js"></script>
   <script src="script.js"></script>
 
