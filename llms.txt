@@ -22,7 +22,6 @@ The official website also provides content in Portuguese, English, and Spanish.
 
 - [Home](https://www.autkids.com/): Overview of Autkids and its features, including a demonstration video and the launch waitlist.
 - [Help Center](https://www.autkids.com/faq/faq.html): Frequently asked questions about the app, accounts, privacy and data security, compatible devices, and support.
-- [About Us](https://www.autkids.com/about-us/about_us.html): The project's story, mission, vision, timeline, values, and team.
 - [Privacy Policy](https://www.autkids.com/privacy-policy/privacy.html): Information about how personal data and children's data are handled.
 - [Terms of Use](https://www.autkids.com/terms-of-use/terms.html): Terms and conditions governing the use of the Autkids app and website.
 

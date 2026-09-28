@@ -73,6 +73,12 @@ const translations = {
 		about_cta_download: 'Entrar na lista de espera',
 
 		// FOOTER
+		nav_download: 'Novidades',
+		footer_help: 'Central de Ajuda',
+		footer_about: 'Sobre Nós',
+		footer_terms: 'Termos de Uso',
+		footer_privacy: 'Política de Privacidade',
+		footer_social: 'Entre em contato conosco:',
 		footer_rights: `© ${currentYear} Autkids | CNPJ: 65.388.377/0001-05. Todos os direitos reservados`
 	},
 
@@ -148,6 +154,12 @@ const translations = {
 		about_cta_download: 'Join the waitlist',
 
 		// FOOTER
+		nav_download: 'Updates',
+		footer_help: 'Help Center',
+		footer_about: 'About Us',
+		footer_terms: 'Terms of Use',
+		footer_privacy: 'Privacy Policy',
+		footer_social: 'Contact Us:',
 		footer_rights: `© ${currentYear} Autkids | CNPJ: 65.388.377/0001-05. All rights reserved`
 	},
 
@@ -223,6 +235,12 @@ const translations = {
 		about_cta_download: 'Unirme a la lista de espera',
 
 		// FOOTER
+		nav_download: 'Novedades',
+		footer_help: 'Centro de Ayuda',
+		footer_about: 'Sobre Nosotros',
+		footer_terms: 'Términos de Uso',
+		footer_privacy: 'Política de Privacidad',
+		footer_social: 'Contáctanos:',
 		footer_rights: `© ${currentYear} Autkids | CNPJ: 65.388.377/0001-05. Todos los derechos reservados`
 	}
 };
