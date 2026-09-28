@@ -9,8 +9,7 @@ O aplicativo ainda não foi lançado nas lojas (App Store / Google Play): o site
 ## Páginas
 
 - [Início](https://www.autkids.com/): Apresentação do app e funcionalidades, vídeo demonstrativo e chamada para entrar na lista de espera do lançamento.
-- [Planos](https://www.autkids.com/pricing/pricing.html): Planos Gratuito, Essencial, Família e Profissional, com preços mensais/anuais e tabela comparativa de recursos (pranchas, cards personalizados, áudios com IA, jogos).
-- [Central de Ajuda](https://www.autkids.com/faq/faq.html): Perguntas frequentes sobre o app, conta, privacidade e segurança de dados, planos e pagamento, dispositivos compatíveis e suporte.
+- [Central de Ajuda](https://www.autkids.com/faq/faq.html): Perguntas frequentes sobre o app, conta, privacidade e segurança de dados, dispositivos compatíveis e suporte.
 - [Sobre Nós](https://www.autkids.com/about-us/about_us.html): História do projeto, missão, visão, linha do tempo, valores e equipe.
 - [Política de Privacidade](https://www.autkids.com/privacy-policy/privacy.html): Tratamento de dados pessoais e da criança.
 - [Termos de Uso](https://www.autkids.com/terms-of-use/terms.html): Condições de uso do aplicativo e do site.
