@@ -1,24 +1,36 @@
 # Autkids
 
-> Autkids é um aplicativo de comunicação aumentativa e alternativa (CAA) que ajuda crianças autistas e não oralizadas a se comunicarem por meio de cartões com imagens, textos e áudios gerados por IA, em um ambiente seguro e sem anúncios.
+> Autkids is an Augmentative and Alternative Communication (AAC) app designed to help autistic and non-speaking children communicate through cards with images, text, and AI-generated audio, in a safe and ad-free environment.
 
-Autkids nasceu como um projeto de pesquisa acadêmica dentro da universidade, com o propósito de dar às crianças autistas uma forma mais simples e acessível de se expressar e se conectar com o mundo. A criança usa uma experiência simples e protegida, enquanto responsáveis e profissionais configuram o conteúdo e acompanham o uso.
+Autkids began as an academic research project at a university, with the goal of providing autistic children with a simpler and more accessible way to express themselves and connect with the world. Children use a simple and protected experience, while parents, caregivers, and professionals can configure content and monitor usage.
 
-O aplicativo ainda não foi lançado nas lojas (App Store / Google Play): o site está em fase de pré-lançamento, e os visitantes podem entrar em uma lista de espera para serem avisados assim que o app estiver disponível.
+The app has not yet been released on the App Store or Google Play. Autkids is currently in its pre-launch stage, and visitors can join the waitlist to be notified when the app becomes available.
 
-## Páginas
+## Languages
 
-- [Início](https://www.autkids.com/): Apresentação do app e funcionalidades, vídeo demonstrativo e chamada para entrar na lista de espera do lançamento.
-- [Central de Ajuda](https://www.autkids.com/faq/faq.html): Perguntas frequentes sobre o app, conta, privacidade e segurança de dados, dispositivos compatíveis e suporte.
-- [Sobre Nós](https://www.autkids.com/about-us/about_us.html): História do projeto, missão, visão, linha do tempo, valores e equipe.
-- [Política de Privacidade](https://www.autkids.com/privacy-policy/privacy.html): Tratamento de dados pessoais e da criança.
-- [Termos de Uso](https://www.autkids.com/terms-of-use/terms.html): Condições de uso do aplicativo e do site.
+Autkids is designed for multilingual use and currently supports:
 
-## Público
+- Portuguese (Brazil) — `pt-BR`
+- English (United States) — `en-US`
+- Spanish — `es-ES`
 
-Famílias de crianças autistas ou com necessidade de apoio na comunicação e rotina, além de clínicas, escolas e profissionais (terapeutas, fonoaudiólogos, psicólogos) que atendem essas crianças.
+The app's communication content and interface are available in these languages, allowing families and professionals to use Autkids according to the child's language and communication needs.
 
-## Contato
+The official website also provides content in Portuguese, English, and Spanish.
 
-- E-mail: suporte@autkids.com
+## Pages
+
+- [Home](https://www.autkids.com/): Overview of Autkids and its features, including a demonstration video and the launch waitlist.
+- [Help Center](https://www.autkids.com/faq/faq.html): Frequently asked questions about the app, accounts, privacy and data security, compatible devices, and support.
+- [About Us](https://www.autkids.com/about-us/about_us.html): The project's story, mission, vision, timeline, values, and team.
+- [Privacy Policy](https://www.autkids.com/privacy-policy/privacy.html): Information about how personal data and children's data are handled.
+- [Terms of Use](https://www.autkids.com/terms-of-use/terms.html): Terms and conditions governing the use of the Autkids app and website.
+
+## Audience
+
+Autkids is intended for families of autistic children or children who need support with communication and daily routines. It is also designed for clinics, schools, and professionals who work with these children, including therapists, speech-language pathologists, and psychologists.
+
+## Contact
+
+- Email: suporte@autkids.com
 - Instagram: https://www.instagram.com/autkids_
