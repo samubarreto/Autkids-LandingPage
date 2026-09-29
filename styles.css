@@ -1037,6 +1037,34 @@ section {
   transform: scale(1.2);
 }
 
+/* ── Mockup 3D em Three.js (ver mockup-3d.js) ── */
+.mockup-3d-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 20;
+  cursor: grab;
+  /* arrasto horizontal gira o tablet; vertical continua rolando a página no celular */
+  touch-action: pan-y;
+}
+
+.mockup-3d-canvas.is-dragging {
+  cursor: grabbing;
+}
+
+.mockup-carousel.mockup-3d-replace-active .mockup-slide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* O fade lateral foi pensado pro carrossel CSS; aqui ele cortaria o tablet 3D. */
+.pricing-right.mockup-3d-no-mask {
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
 /* ========================================
    TUTORIAL YOUTUBE
 ======================================== */
