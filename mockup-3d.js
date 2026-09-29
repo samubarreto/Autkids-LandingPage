@@ -91,9 +91,9 @@
       const h = carousel.clientHeight;
       if (!w || !h) return;
       renderer.setSize(w, h, false);
-      // Composição de tamanho fixo (tablet + sombra) cabendo inteira no quadro,
+      // Composição de tamanho fixo mantendo o tablet inteiro no quadro,
       // qualquer que seja a proporção da caixa (desktop largo, celular, etc.).
-      fitPerspectiveCamera(camera, w, h, FRAME_W / 2 + 0.15, FRAME_H / 2 + 0.22, DISTANCE, 1.04);
+      fitPerspectiveCamera(camera, w, h, FRAME_W / 2 + 0.15, FRAME_H / 2 + 0.1, DISTANCE, 1.04);
     }
     new ResizeObserver(resize).observe(carousel);
     resize();
@@ -241,14 +241,6 @@
       else img.addEventListener('load', build, { once: true });
     });
 
-    /* ---------- Sombra suave embaixo ---------- */
-    const shadow = new THREE.Mesh(
-      new THREE.PlaneGeometry(FRAME_W * 0.95, 0.42),
-      new THREE.MeshBasicMaterial({ map: shadowTexture(), transparent: true, depthWrite: false })
-    );
-    shadow.position.set(0, -FRAME_H / 2 - 0.02, -0.6);
-    scene.add(shadow);
-
     /* ---------- Estado: giro, inércia, auto-play, toques ---------- */
     let rotY = 0; // giro acumulado; cada volta completa = uma tela
     let velY = 0;
@@ -392,7 +384,6 @@
 
         // Toques automáticos só quando a tela está de frente e parada.
         const facing = Math.cos(visualY);
-        shadow.scale.x = 0.45 + 0.55 * Math.abs(facing);
         if (settled && facing > 0.9 && screen.visible) {
           tapTimer -= dt;
           if (tapTimer <= 0) {
@@ -449,17 +440,4 @@
     return tex;
   }
 
-  function shadowTexture() {
-    const c = document.createElement('canvas');
-    c.width = 256;
-    c.height = 64;
-    const ctx = c.getContext('2d');
-    const g = ctx.createRadialGradient(128, 32, 0, 128, 32, 128);
-    g.addColorStop(0, 'rgba(120,70,0,0.35)');
-    g.addColorStop(1, 'rgba(120,70,0,0)');
-    ctx.fillStyle = g;
-    ctx.setTransform(1, 0, 0, 0.25, 0, 24);
-    ctx.fillRect(0, 0, 256, 256);
-    return new THREE.CanvasTexture(c);
-  }
 })();
